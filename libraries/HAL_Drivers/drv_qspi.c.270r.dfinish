@@ -1,0 +1,3500 @@
+
+;; Function stm32_qspi_init (stm32_qspi_init, funcdef_no=339, decl_uid=13354, cgraph_uid=341, symbol_order=343)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 190 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 190 5 191 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -12 [0xfffffffffffffff4]))) [0  A8])
+                (unspec:BLK [
+                        (reg:SI 4 r4)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg/f:SI 7 r7))
+            (use (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:41 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -12 [0xfffffffffffffff4])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg:SI 4 r4))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 8 [0x8])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 191 190 192 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -108 [0xffffffffffffff94]))) libraries\HAL_Drivers\drv_qspi.c:41 4 {*arm_addsi3}
+     (nil))
+(insn 192 191 193 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) libraries\HAL_Drivers\drv_qspi.c:41 293 {stack_tie}
+     (nil))
+(insn/f 193 192 194 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:41 4 {*arm_addsi3}
+     (nil))
+(note 194 193 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 194 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 device+0 S4 A32])
+        (reg:SI 0 r0 [ device ])) libraries\HAL_Drivers\drv_qspi.c:41 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (reg/f:SI 7 r7) [0 qspi_cfg+0 S4 A32])
+        (reg:SI 1 r1 [ qspi_cfg ])) libraries\HAL_Drivers\drv_qspi.c:41 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (parallel [
+            (set (reg:SI 3 r3 [131])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:42 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 8 7 9 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 96 [0x60])) [0 result+0 S4 A32])
+        (reg:SI 3 r3 [131])) libraries\HAL_Drivers\drv_qspi.c:42 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 9 8 10 2 (parallel [
+            (set (reg:SI 3 r3 [132])
+                (const_int 1 [0x1]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:43 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 10 9 11 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 100 [0x64])) [0 i+0 S4 A32])
+        (reg:SI 3 r3 [132])) libraries\HAL_Drivers\drv_qspi.c:43 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 3 r3 [133])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:45 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [133])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:45 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 19)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:45 194 {arm_cond_branch}
+     (nil)
+ -> 19)
+(note 14 13 15 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 3 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 45 [0x2d]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:45 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 16 15 17 3 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 205) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:45 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 17 16 18 3 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 205)
+                    (const_int 4 [0x4]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:45 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 18 17 19 3 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 059d5680 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:45 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 19 18 20 4 2 "" [1 uses])
+(note 20 19 21 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 4 (set (reg:SI 3 r3 [134])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 qspi_cfg+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:46 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 21 23 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [134])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:46 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 23 22 24 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 29)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:46 194 {arm_cond_branch}
+     (nil)
+ -> 29)
+(note 24 23 25 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 5 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 46 [0x2e]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:46 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 26 25 27 5 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 205) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:46 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 27 26 28 5 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 205)
+                    (const_int 8 [0x8]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:46 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 28 27 29 5 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 059d5680 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:46 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 29 28 30 6 3 "" [1 uses])
+(note 30 29 31 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 6 (set (reg/f:SI 3 r3 [135])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 qspi_cfg+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:48 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 32 31 33 6 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 92 [0x5c])) [0 cfg+0 S4 A32])
+        (reg/f:SI 3 r3 [135])) libraries\HAL_Drivers\drv_qspi.c:48 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 33 32 34 6 (set (reg/f:SI 3 r3 [136])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:49 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 34 33 35 6 (set (reg/f:SI 3 r3 [orig:111 D.13593 ] [111])
+        (mem/f/j:SI (plus:SI (reg/f:SI 3 r3 [136])
+                (const_int 80 [0x50])) [0 device_11(D)->parent.bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:49 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 35 34 36 6 (set (reg/f:SI 3 r3 [137])
+        (mem/f/j:SI (plus:SI (reg/f:SI 3 r3 [orig:111 D.13593 ] [111])
+                (const_int 76 [0x4c])) [0 _17->parent.user_data+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:49 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 36 35 37 6 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 88 [0x58])) [0 qspi_bus+0 S4 A32])
+        (reg/f:SI 3 r3 [137])) libraries\HAL_Drivers\drv_qspi.c:49 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 37 36 38 6 (set (reg/f:SI 3 r3 [orig:112 D.13594 ] [112])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 88 [0x58])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:50 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 38 37 39 6 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 68 [0x44]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:50 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 39 38 40 6 (parallel [
+            (set (reg:SI 1 r1)
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:50 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 40 39 41 6 (set (reg:SI 0 r0)
+        (reg/f:SI 3 r3 [orig:112 D.13594 ] [112])) libraries\HAL_Drivers\drv_qspi.c:50 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 41 40 42 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_memset") [flags 0x41]  <function_decl 059cff00 rt_memset>) [0 rt_memset S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:50 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 42 41 43 6 (set (reg:SI 3 r3 [138])
+        (plus:SI (reg/f:SI 7 r7)
+            (const_int 12 [0xc]))) libraries\HAL_Drivers\drv_qspi.c:52 4 {*arm_addsi3}
+     (nil))
+(insn 43 42 45 6 (parallel [
+            (set (reg:SI 2 r2 [139])
+                (const_int 68 [0x44]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:52 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 45 43 46 6 (parallel [
+            (set (reg:SI 1 r1)
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:52 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 46 45 47 6 (set (reg:SI 0 r0)
+        (reg:SI 3 r3 [138])) libraries\HAL_Drivers\drv_qspi.c:52 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 47 46 49 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 064dda80 memset>) [0 memset S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:52 211 {*call_value_symbol}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 49 47 50 6 (set (reg:SI 3 r3 [141])
+        (mem:SI (const:SI (plus:SI (label_ref 205)
+                    (const_int 12 [0xc]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:52 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 50 49 51 6 (set (mem/f/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 QSPI_Handler_config.Instance+0 S4 A32])
+        (reg:SI 3 r3 [141])) libraries\HAL_Drivers\drv_qspi.c:52 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 51 50 52 6 (parallel [
+            (set (reg:SI 3 r3 [142])
+                (const_int 4 [0x4]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:52 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 52 51 53 6 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 QSPI_Handler_config.Init.FifoThreshold+0 S4 A32])
+        (reg:SI 3 r3 [142])) libraries\HAL_Drivers\drv_qspi.c:52 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 53 52 54 6 (parallel [
+            (set (reg:SI 3 r3 [143])
+                (const_int 16 [0x10]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:52 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 54 53 55 6 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [0 QSPI_Handler_config.Init.SampleShifting+0 S4 A32])
+        (reg:SI 3 r3 [143])) libraries\HAL_Drivers\drv_qspi.c:52 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 55 54 56 6 (set (reg:SI 3 r3 [144])
+        (const_int 768 [0x300])) libraries\HAL_Drivers\drv_qspi.c:52 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 56 55 57 6 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 32 [0x20])) [0 QSPI_Handler_config.Init.ChipSelectHighTime+0 S4 A32])
+        (reg:SI 3 r3 [144])) libraries\HAL_Drivers\drv_qspi.c:52 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 57 56 58 6 (set (reg/f:SI 3 r3 [145])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 88 [0x58])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:53 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 58 57 59 6 (set (reg:SI 0 r0 [146])
+        (reg/f:SI 3 r3 [145])) libraries\HAL_Drivers\drv_qspi.c:53 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 59 58 60 6 (set (reg:SI 3 r3 [147])
+        (plus:SI (reg/f:SI 7 r7)
+            (const_int 12 [0xc]))) libraries\HAL_Drivers\drv_qspi.c:53 4 {*arm_addsi3}
+     (nil))
+(insn 60 59 62 6 (parallel [
+            (set (reg:SI 2 r2 [148])
+                (const_int 68 [0x44]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:53 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 62 60 64 6 (set (reg:SI 1 r1)
+        (reg:SI 3 r3 [147])) libraries\HAL_Drivers\drv_qspi.c:53 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 64 62 180 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("memcpy") [flags 0x41]  <function_decl 064ddb00 memcpy>) [0 memcpy S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:53 211 {*call_value_symbol}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (set (reg:SI 0 r0)
+                (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 0 r0))
+                (expr_list:SI (use (reg:SI 1 r1))
+                    (expr_list:SI (use (reg:SI 2 r2))
+                        (nil)))))))
+(jump_insn 180 64 181 6 (set (pc)
+        (label_ref 88)) libraries\HAL_Drivers\drv_qspi.c:55 203 {*arm_jump}
+     (nil)
+ -> 88)
+(barrier 181 180 97)
+(code_label 97 181 68 7 6 "" [1 uses])
+(note 68 97 69 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 7 (set (reg:SI 3 r3 [151])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 100 [0x64])) [0 i+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:57 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 70 69 71 7 (parallel [
+            (set (reg:SI 3 r3 [150])
+                (plus:SI (reg:SI 3 r3 [151])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:57 831 {*thumb2_addsi_short}
+     (nil))
+(insn 71 70 72 7 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 100 [0x64])) [0 i+0 S4 A32])
+        (reg:SI 3 r3 [150])) libraries\HAL_Drivers\drv_qspi.c:57 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 72 71 73 7 (set (reg:SI 3 r3 [152])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 100 [0x64])) [0 i+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:58 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 73 72 74 7 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [152])
+            (const_int 255 [0xff]))) libraries\HAL_Drivers\drv_qspi.c:58 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 74 73 75 7 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 88)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:58 194 {arm_cond_branch}
+     (nil)
+ -> 88)
+(note 75 74 76 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 76 75 77 8 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 205)
+                    (const_int 16 [0x10]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:60 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 77 76 78 8 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:60 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 78 77 79 8 (set (reg/f:SI 3 r3 [153])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 92 [0x5c])) [0 cfg+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:60 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 79 78 80 8 (set (reg:SI 3 r3 [orig:117 D.13595 ] [117])
+        (mem/j:SI (plus:SI (reg/f:SI 3 r3 [153])
+                (const_int 4 [0x4])) [0 cfg_16->max_hz+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:60 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 80 79 81 8 (set (reg:SI 1 r1)
+        (reg:SI 3 r3 [orig:117 D.13595 ] [117])) libraries\HAL_Drivers\drv_qspi.c:60 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 81 80 82 8 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 205)
+                    (const_int 20 [0x14]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:60 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 82 81 83 8 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:60 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 83 82 84 8 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 205)
+                    (const_int 24 [0x18]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:60 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 84 83 85 8 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:60 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 85 84 182 8 (set (reg:SI 3 r3 [orig:110 D.13592 ] [110])
+        (const_int -1 [0xffffffffffffffff])) libraries\HAL_Drivers\drv_qspi.c:61 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 182 85 183 8 (set (pc)
+        (label_ref 171)) libraries\HAL_Drivers\drv_qspi.c:61 203 {*arm_jump}
+     (nil)
+ -> 171)
+(barrier 183 182 88)
+(code_label 88 183 89 9 4 "" [2 uses])
+(note 89 88 90 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 90 89 91 9 (set (reg/f:SI 3 r3 [154])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 92 [0x5c])) [0 cfg+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:55 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 91 90 92 9 (set (reg:SI 4 r4 [orig:113 D.13595 ] [113])
+        (mem/j:SI (plus:SI (reg/f:SI 3 r3 [154])
+                (const_int 4 [0x4])) [0 cfg_16->max_hz+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:55 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 92 91 93 9 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_RCC_GetHCLKFreq") [flags 0x41]  <function_decl 060a8400 HAL_RCC_GetHCLKFreq>) [0 HAL_RCC_GetHCLKFreq S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:55 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 93 92 94 9 (set (reg:SI 2 r2 [orig:114 D.13596 ] [114])
+        (reg:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:55 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 94 93 95 9 (set (reg:SI 3 r3 [155])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 100 [0x64])) [0 i+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:55 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 95 94 96 9 (parallel [
+            (set (reg:SI 3 r3 [orig:115 D.13595 ] [115])
+                (plus:SI (reg:SI 3 r3 [155])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:55 831 {*thumb2_addsi_short}
+     (nil))
+(insn 96 95 98 9 (set (reg:SI 3 r3 [orig:116 D.13596 ] [116])
+        (udiv:SI (reg:SI 2 r2 [orig:114 D.13596 ] [114])
+            (reg:SI 3 r3 [orig:115 D.13595 ] [115]))) libraries\HAL_Drivers\drv_qspi.c:55 138 {udivsi3}
+     (nil))
+(insn 98 96 99 9 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 4 r4 [orig:113 D.13595 ] [113])
+            (reg:SI 3 r3 [orig:116 D.13596 ] [116]))) libraries\HAL_Drivers\drv_qspi.c:55 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 99 98 100 9 (set (pc)
+        (if_then_else (ltu (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 97)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:55 194 {arm_cond_branch}
+     (nil)
+ -> 97)
+(note 100 99 101 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 101 100 102 10 (set (reg/f:SI 3 r3 [156])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 88 [0x58])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:65 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 102 101 103 10 (set (reg:SI 2 r2 [157])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 100 [0x64])) [0 i+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:65 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 103 102 104 10 (set (mem/j:SI (plus:SI (reg/f:SI 3 r3 [156])
+                (const_int 4 [0x4])) [0 qspi_bus_18->QSPI_Handler.Init.ClockPrescaler+0 S4 A32])
+        (reg:SI 2 r2 [157])) libraries\HAL_Drivers\drv_qspi.c:65 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 104 103 105 10 (set (reg/f:SI 3 r3 [158])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 92 [0x5c])) [0 cfg+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:67 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 105 104 107 10 (set (reg:SI 3 r3 [orig:118 D.13597 ] [118])
+        (zero_extend:SI (mem/j:QI (reg/f:SI 3 r3 [158]) [0 cfg_16->mode+0 S1 A32]))) libraries\HAL_Drivers\drv_qspi.c:67 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 107 105 108 10 (set (reg:SI 3 r3 [orig:120 D.13592 ] [120])
+        (and:SI (reg:SI 3 r3 [orig:119 D.13592 ] [119])
+            (const_int 2 [0x2]))) libraries\HAL_Drivers\drv_qspi.c:67 74 {*arm_andsi3_insn}
+     (nil))
+(insn 108 107 109 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:120 D.13592 ] [120])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:67 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 109 108 110 10 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 116)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:67 194 {arm_cond_branch}
+     (nil)
+ -> 116)
+(note 110 109 111 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 111 110 112 11 (set (reg/f:SI 3 r3 [159])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 88 [0x58])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:70 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 112 111 113 11 (parallel [
+            (set (reg:SI 2 r2 [160])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:70 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 113 112 184 11 (set (mem/j:SI (plus:SI (reg/f:SI 3 r3 [159])
+                (const_int 24 [0x18])) [0 qspi_bus_18->QSPI_Handler.Init.ClockMode+0 S4 A32])
+        (reg:SI 2 r2 [160])) libraries\HAL_Drivers\drv_qspi.c:70 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 184 113 185 11 (set (pc)
+        (label_ref 121)) 203 {*arm_jump}
+     (nil)
+ -> 121)
+(barrier 185 184 116)
+(code_label 116 185 117 12 7 "" [1 uses])
+(note 117 116 118 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 118 117 119 12 (set (reg/f:SI 3 r3 [161])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 88 [0x58])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:75 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 119 118 120 12 (parallel [
+            (set (reg:SI 2 r2 [162])
+                (const_int 1 [0x1]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:75 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 120 119 121 12 (set (mem/j:SI (plus:SI (reg/f:SI 3 r3 [161])
+                (const_int 24 [0x18])) [0 qspi_bus_18->QSPI_Handler.Init.ClockMode+0 S4 A32])
+        (reg:SI 2 r2 [162])) libraries\HAL_Drivers\drv_qspi.c:75 615 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 121 120 122 13 8 "" [1 uses])
+(note 122 121 123 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 123 122 124 13 (set (reg/f:SI 3 r3 [163])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 qspi_cfg+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:79 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 124 123 125 13 (set (reg:SI 3 r3 [orig:121 D.13595 ] [121])
+        (mem/j:SI (plus:SI (reg/f:SI 3 r3 [163])
+                (const_int 8 [0x8])) [0 qspi_cfg_14(D)->medium_size+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:79 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 125 124 232 13 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 84 [0x54])) [0 value+0 S4 A32])
+        (reg:SI 3 r3 [orig:121 D.13595 ] [121])) 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 232 125 231 13 064d0f18 NOTE_INSN_BLOCK_BEG)
+(note 231 232 126 13 064d0f50 NOTE_INSN_BLOCK_BEG)
+(insn 126 231 127 13 (set (reg:SI 3 r3 [165])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 84 [0x54])) [0 value+0 S4 A32])) libraries\STM32L4xx_HAL\CMSIS\Include/cmsis_gcc.h:988 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 127 126 128 13 (set (reg:SI 3 r3 [orig:164 result ] [164])
+        (asm_operands/v:SI ("rbit %0, %1") ("=r") 0 [
+                (reg:SI 3 r3 [165])
+            ]
+             [
+                (asm_input:SI ("r") libraries\STM32L4xx_HAL\CMSIS\Include/cmsis_gcc.h:988)
+            ]
+             [] libraries\STM32L4xx_HAL\CMSIS\Include/cmsis_gcc.h:988)) libraries\STM32L4xx_HAL\CMSIS\Include/cmsis_gcc.h:988 -1
+     (nil))
+(insn 128 127 129 13 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 80 [0x50])) [0 result+0 S4 A32])
+        (reg:SI 3 r3 [orig:164 result ] [164])) libraries\STM32L4xx_HAL\CMSIS\Include/cmsis_gcc.h:988 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 129 128 233 13 (set (reg:SI 3 r3 [orig:122 D.13589 ] [122])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 80 [0x50])) [0 result+0 S4 A32])) libraries\STM32L4xx_HAL\CMSIS\Include/cmsis_gcc.h:1001 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 233 129 234 13 064d0f50 NOTE_INSN_BLOCK_END)
+(note 234 233 132 13 064d0f18 NOTE_INSN_BLOCK_END)
+(insn 132 234 133 13 (set (reg:SI 3 r3 [orig:123 D.13592 ] [123])
+        (clz:SI (reg:SI 3 r3 [orig:122 D.13589 ] [122]))) libraries\HAL_Drivers\drv_qspi.c:79 307 {clzsi2}
+     (nil))
+(insn 133 132 135 13 (set (reg:SI 3 r3 [orig:124 D.13597 ] [124])
+        (zero_extend:SI (reg:QI 3 r3 [orig:123 D.13592 ] [123]))) libraries\HAL_Drivers\drv_qspi.c:79 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 135 133 136 13 (parallel [
+            (set (reg:SI 3 r3 [orig:126 D.13592 ] [126])
+                (plus:SI (reg:SI 3 r3 [orig:125 D.13592 ] [125])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:79 831 {*thumb2_addsi_short}
+     (nil))
+(insn 136 135 137 13 (set (reg:SI 2 r2 [orig:127 D.13596 ] [127])
+        (reg:SI 3 r3 [orig:126 D.13592 ] [126])) libraries\HAL_Drivers\drv_qspi.c:79 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 137 136 138 13 (set (reg/f:SI 3 r3 [166])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 88 [0x58])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:79 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 138 137 139 13 (set (mem/j:SI (plus:SI (reg/f:SI 3 r3 [166])
+                (const_int 16 [0x10])) [0 qspi_bus_18->QSPI_Handler.Init.FlashSize+0 S4 A32])
+        (reg:SI 2 r2 [orig:127 D.13596 ] [127])) libraries\HAL_Drivers\drv_qspi.c:79 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 139 138 140 13 (set (reg/f:SI 3 r3 [orig:128 D.13594 ] [128])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 88 [0x58])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:81 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 140 139 141 13 (set (reg:SI 0 r0)
+        (reg/f:SI 3 r3 [orig:128 D.13594 ] [128])) libraries\HAL_Drivers\drv_qspi.c:81 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 141 140 142 13 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_QSPI_Init") [flags 0x41]  <function_decl 06277b00 HAL_QSPI_Init>) [0 HAL_QSPI_Init S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:81 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 142 141 144 13 (set (reg:SI 3 r3 [167])
+        (reg:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:81 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 144 142 145 13 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 96 [0x60])) [0 result+0 S4 A32])
+        (reg:SI 3 r3 [orig:129 D.13598 ] [129])) libraries\HAL_Drivers\drv_qspi.c:81 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 145 144 146 13 (set (reg:SI 3 r3 [168])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 96 [0x60])) [0 result+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:82 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 146 145 147 13 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [168])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:82 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 147 146 148 13 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 157)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:82 194 {arm_cond_branch}
+     (nil)
+ -> 157)
+(note 148 147 149 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 149 148 150 14 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 205)
+                    (const_int 28 [0x1c]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:84 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 150 149 151 14 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:84 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 151 150 152 14 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 205)
+                    (const_int 32 [0x20]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:84 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 152 151 153 14 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:84 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 153 152 154 14 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 205)
+                    (const_int 24 [0x18]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:84 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 154 153 186 14 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:84 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(jump_insn 186 154 187 14 (set (pc)
+        (label_ref 166)) 203 {*arm_jump}
+     (nil)
+ -> 166)
+(barrier 187 186 157)
+(code_label 157 187 158 15 10 "" [1 uses])
+(note 158 157 159 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 159 158 160 15 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 205)
+                    (const_int 16 [0x10]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:88 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 160 159 161 15 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:88 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 161 160 162 15 (set (reg:SI 1 r1)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 96 [0x60])) [0 result+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:88 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 162 161 163 15 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 205)
+                    (const_int 36 [0x24]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:88 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 163 162 164 15 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:88 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 164 163 165 15 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 205)
+                    (const_int 24 [0x18]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:88 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 165 164 166 15 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:88 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(code_label 166 165 167 16 11 "" [1 uses])
+(note 167 166 168 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 168 167 171 16 (set (reg:SI 3 r3 [orig:110 D.13592 ] [110])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 96 [0x60])) [0 result+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:120 615 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 171 168 172 17 12 "" [1 uses])
+(note 172 171 177 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 177 172 178 17 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:130 <retval> ] [130])) libraries\HAL_Drivers\drv_qspi.c:121 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 178 177 195 17 (use (reg/i:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:121 -1
+     (nil))
+(note 195 178 196 17 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 196 195 197 17 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 108 [0x6c])))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:121 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 108 [0x6c])))
+        (nil)))
+(insn 197 196 198 17 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) libraries\HAL_Drivers\drv_qspi.c:121 221 {blockage}
+     (nil))
+(insn/f 198 197 199 17 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) libraries\HAL_Drivers\drv_qspi.c:121 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 199 198 200 17 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) libraries\HAL_Drivers\drv_qspi.c:121 310 {force_register_use}
+     (nil))
+(jump_insn 200 199 201 17 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 12 [0xc])))
+            (set/f (reg:SI 4 r4)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 8 [0x8])) [0  S4 A32]))
+        ]) libraries\HAL_Drivers\drv_qspi.c:121 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (expr_list:REG_CFA_RESTORE (reg:SI 4 r4)
+            (nil)))
+ -> return)
+(barrier 201 200 203)
+(code_label 203 201 204 14 "" [0 uses])
+(insn 204 203 205 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 205 204 206 13 "" [0 uses])
+(insn 206 205 207 (unspec_volatile [
+            (symbol_ref:SI ("__FUNCTION__.13358") [flags 0x2]  <var_decl 063f0a50 __FUNCTION__>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 207 206 208 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 064f5f78 *.LC0>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 208 207 209 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 064f5688 *.LC1>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 209 208 210 (unspec_volatile [
+            (const_int -1610608640 [0xffffffffa0001000])
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 210 209 211 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0652b0b0 *.LC2>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 211 210 212 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0652b108 *.LC3>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 212 211 213 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0652b160 *.LC4>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 213 212 214 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0652b210 *.LC5>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 214 213 215 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0652b268 *.LC6>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 215 214 216 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0652b2c0 *.LC7>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 216 215 217 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 217 216 189)
+(note 189 217 0 NOTE_INSN_DELETED)
+
+;; Function qspi_send_cmd (qspi_send_cmd, funcdef_no=340, decl_uid=13367, cgraph_uid=342, symbol_order=344)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 220 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 220 5 221 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:124 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 221 220 222 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -64 [0xffffffffffffffc0]))) libraries\HAL_Drivers\drv_qspi.c:124 4 {*arm_addsi3}
+     (nil))
+(insn 222 221 223 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) libraries\HAL_Drivers\drv_qspi.c:124 293 {stack_tie}
+     (nil))
+(insn/f 223 222 224 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:124 4 {*arm_addsi3}
+     (nil))
+(note 224 223 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 224 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 qspi_bus+0 S4 A32])
+        (reg:SI 0 r0 [ qspi_bus ])) libraries\HAL_Drivers\drv_qspi.c:124 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])
+        (reg:SI 1 r1 [ message ])) libraries\HAL_Drivers\drv_qspi.c:124 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:SI 3 r3 [129])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:125 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [129])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:125 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 9 8 10 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 15)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:125 194 {arm_cond_branch}
+     (nil)
+ -> 15)
+(note 10 9 11 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 12 3 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 125 [0x7d]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:125 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 12 11 13 3 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 235) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:125 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 3 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 235)
+                    (const_int 4 [0x4]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:125 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 14 13 15 3 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 059d5680 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:125 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 15 14 16 4 16 "" [1 uses])
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 4 (set (reg:SI 3 r3 [130])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:126 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 17 19 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [130])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:126 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 19 18 20 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 25)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:126 194 {arm_cond_branch}
+     (nil)
+ -> 25)
+(note 20 19 21 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 5 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 126 [0x7e]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:126 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 22 21 23 5 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 235) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:126 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 23 22 24 5 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 235)
+                    (const_int 8 [0x8]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:126 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 24 23 25 5 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 059d5680 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:126 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 25 24 26 6 17 "" [1 uses])
+(note 26 25 27 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 6 (set (reg/f:SI 3 r3 [131])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:131 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 28 27 30 6 (set (reg:SI 3 r3 [orig:110 D.13615 ] [110])
+        (zero_extend:SI (mem/j:QI (plus:SI (reg/f:SI 3 r3 [131])
+                    (const_int 20 [0x14])) [0 message_10(D)->instruction.content+0 S1 A32]))) libraries\HAL_Drivers\drv_qspi.c:131 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 30 28 31 6 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [0 Cmdhandler.Instruction+0 S4 A64])
+        (reg:SI 3 r3 [orig:111 D.13616 ] [111])) libraries\HAL_Drivers\drv_qspi.c:131 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 31 30 32 6 (set (reg/f:SI 3 r3 [132])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:132 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 32 31 33 6 (set (reg:SI 3 r3 [orig:112 D.13617 ] [112])
+        (mem/j:SI (plus:SI (reg/f:SI 3 r3 [132])
+                (const_int 24 [0x18])) [0 message_10(D)->address.content+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:132 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 33 32 34 6 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 Cmdhandler.Address+0 S4 A32])
+        (reg:SI 3 r3 [orig:112 D.13617 ] [112])) libraries\HAL_Drivers\drv_qspi.c:132 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 34 33 35 6 (set (reg/f:SI 3 r3 [133])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:133 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 35 34 36 6 (set (reg:SI 3 r3 [orig:113 D.13617 ] [113])
+        (mem/j:SI (plus:SI (reg/f:SI 3 r3 [133])
+                (const_int 40 [0x28])) [0 message_10(D)->dummy_cycles+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:133 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 36 35 37 6 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 28 [0x1c])) [0 Cmdhandler.DummyCycles+0 S4 A32])
+        (reg:SI 3 r3 [orig:113 D.13617 ] [113])) libraries\HAL_Drivers\drv_qspi.c:133 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 37 36 38 6 (set (reg/f:SI 3 r3 [134])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:134 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 38 37 39 6 (set (reg:SI 3 r3 [orig:114 D.13615 ] [114])
+        (zero_extend:SI (mem/j:QI (plus:SI (reg/f:SI 3 r3 [134])
+                    (const_int 21 [0x15])) [0 message_10(D)->instruction.qspi_lines+0 S1 A8]))) libraries\HAL_Drivers\drv_qspi.c:134 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 39 38 40 6 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:114 D.13615 ] [114])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:134 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 40 39 41 6 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 46)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:134 194 {arm_cond_branch}
+     (nil)
+ -> 46)
+(note 41 40 42 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 42 41 43 7 (parallel [
+            (set (reg:SI 3 r3 [135])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:136 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 43 42 198 7 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 32 [0x20])) [0 Cmdhandler.InstructionMode+0 S4 A64])
+        (reg:SI 3 r3 [135])) libraries\HAL_Drivers\drv_qspi.c:136 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 198 43 199 7 (set (pc)
+        (label_ref 77)) 203 {*arm_jump}
+     (nil)
+ -> 77)
+(barrier 199 198 46)
+(code_label 46 199 47 8 18 "" [1 uses])
+(note 47 46 48 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 48 47 49 8 (set (reg/f:SI 3 r3 [136])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:138 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 49 48 50 8 (set (reg:SI 3 r3 [orig:115 D.13615 ] [115])
+        (zero_extend:SI (mem/j:QI (plus:SI (reg/f:SI 3 r3 [136])
+                    (const_int 21 [0x15])) [0 message_10(D)->instruction.qspi_lines+0 S1 A8]))) libraries\HAL_Drivers\drv_qspi.c:138 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 50 49 51 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:115 D.13615 ] [115])
+            (const_int 1 [0x1]))) libraries\HAL_Drivers\drv_qspi.c:138 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 51 50 52 8 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 57)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:138 194 {arm_cond_branch}
+     (nil)
+ -> 57)
+(note 52 51 53 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 53 52 54 9 (set (reg:SI 3 r3 [137])
+        (const_int 256 [0x100])) libraries\HAL_Drivers\drv_qspi.c:140 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 54 53 200 9 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 32 [0x20])) [0 Cmdhandler.InstructionMode+0 S4 A64])
+        (reg:SI 3 r3 [137])) libraries\HAL_Drivers\drv_qspi.c:140 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 200 54 201 9 (set (pc)
+        (label_ref 77)) 203 {*arm_jump}
+     (nil)
+ -> 77)
+(barrier 201 200 57)
+(code_label 57 201 58 10 20 "" [1 uses])
+(note 58 57 59 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 59 58 60 10 (set (reg/f:SI 3 r3 [138])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:142 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 60 59 61 10 (set (reg:SI 3 r3 [orig:116 D.13615 ] [116])
+        (zero_extend:SI (mem/j:QI (plus:SI (reg/f:SI 3 r3 [138])
+                    (const_int 21 [0x15])) [0 message_10(D)->instruction.qspi_lines+0 S1 A8]))) libraries\HAL_Drivers\drv_qspi.c:142 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 61 60 62 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:116 D.13615 ] [116])
+            (const_int 2 [0x2]))) libraries\HAL_Drivers\drv_qspi.c:142 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 62 61 63 10 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 68)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:142 194 {arm_cond_branch}
+     (nil)
+ -> 68)
+(note 63 62 64 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 64 63 65 11 (set (reg:SI 3 r3 [139])
+        (const_int 512 [0x200])) libraries\HAL_Drivers\drv_qspi.c:144 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 65 64 202 11 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 32 [0x20])) [0 Cmdhandler.InstructionMode+0 S4 A64])
+        (reg:SI 3 r3 [139])) libraries\HAL_Drivers\drv_qspi.c:144 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 202 65 203 11 (set (pc)
+        (label_ref 77)) 203 {*arm_jump}
+     (nil)
+ -> 77)
+(barrier 203 202 68)
+(code_label 68 203 69 12 21 "" [1 uses])
+(note 69 68 70 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 70 69 71 12 (set (reg/f:SI 3 r3 [140])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:146 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 71 70 72 12 (set (reg:SI 3 r3 [orig:117 D.13615 ] [117])
+        (zero_extend:SI (mem/j:QI (plus:SI (reg/f:SI 3 r3 [140])
+                    (const_int 21 [0x15])) [0 message_10(D)->instruction.qspi_lines+0 S1 A8]))) libraries\HAL_Drivers\drv_qspi.c:146 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 72 71 73 12 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:117 D.13615 ] [117])
+            (const_int 4 [0x4]))) libraries\HAL_Drivers\drv_qspi.c:146 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 73 72 74 12 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 77)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:146 194 {arm_cond_branch}
+     (nil)
+ -> 77)
+(note 74 73 75 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 75 74 76 13 (set (reg:SI 3 r3 [141])
+        (const_int 768 [0x300])) libraries\HAL_Drivers\drv_qspi.c:148 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 76 75 77 13 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 32 [0x20])) [0 Cmdhandler.InstructionMode+0 S4 A64])
+        (reg:SI 3 r3 [141])) libraries\HAL_Drivers\drv_qspi.c:148 615 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 77 76 78 14 19 "" [4 uses])
+(note 78 77 79 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 79 78 80 14 (set (reg/f:SI 3 r3 [142])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:150 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 80 79 81 14 (set (reg:SI 3 r3 [orig:118 D.13615 ] [118])
+        (zero_extend:SI (mem/j:QI (plus:SI (reg/f:SI 3 r3 [142])
+                    (const_int 29 [0x1d])) [0 message_10(D)->address.qspi_lines+0 S1 A8]))) libraries\HAL_Drivers\drv_qspi.c:150 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 81 80 82 14 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:118 D.13615 ] [118])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:150 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 82 81 83 14 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 88)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:150 194 {arm_cond_branch}
+     (nil)
+ -> 88)
+(note 83 82 84 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 84 83 85 15 (parallel [
+            (set (reg:SI 3 r3 [143])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:152 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 85 84 204 15 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 36 [0x24])) [0 Cmdhandler.AddressMode+0 S4 A32])
+        (reg:SI 3 r3 [143])) libraries\HAL_Drivers\drv_qspi.c:152 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 204 85 205 15 (set (pc)
+        (label_ref 119)) 203 {*arm_jump}
+     (nil)
+ -> 119)
+(barrier 205 204 88)
+(code_label 88 205 89 16 22 "" [1 uses])
+(note 89 88 90 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 90 89 91 16 (set (reg/f:SI 3 r3 [144])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:154 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 91 90 92 16 (set (reg:SI 3 r3 [orig:119 D.13615 ] [119])
+        (zero_extend:SI (mem/j:QI (plus:SI (reg/f:SI 3 r3 [144])
+                    (const_int 29 [0x1d])) [0 message_10(D)->address.qspi_lines+0 S1 A8]))) libraries\HAL_Drivers\drv_qspi.c:154 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 92 91 93 16 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:119 D.13615 ] [119])
+            (const_int 1 [0x1]))) libraries\HAL_Drivers\drv_qspi.c:154 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 93 92 94 16 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 99)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:154 194 {arm_cond_branch}
+     (nil)
+ -> 99)
+(note 94 93 95 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 95 94 96 17 (set (reg:SI 3 r3 [145])
+        (const_int 1024 [0x400])) libraries\HAL_Drivers\drv_qspi.c:156 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 96 95 206 17 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 36 [0x24])) [0 Cmdhandler.AddressMode+0 S4 A32])
+        (reg:SI 3 r3 [145])) libraries\HAL_Drivers\drv_qspi.c:156 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 206 96 207 17 (set (pc)
+        (label_ref 119)) 203 {*arm_jump}
+     (nil)
+ -> 119)
+(barrier 207 206 99)
+(code_label 99 207 100 18 24 "" [1 uses])
+(note 100 99 101 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 101 100 102 18 (set (reg/f:SI 3 r3 [146])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:158 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 102 101 103 18 (set (reg:SI 3 r3 [orig:120 D.13615 ] [120])
+        (zero_extend:SI (mem/j:QI (plus:SI (reg/f:SI 3 r3 [146])
+                    (const_int 29 [0x1d])) [0 message_10(D)->address.qspi_lines+0 S1 A8]))) libraries\HAL_Drivers\drv_qspi.c:158 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 103 102 104 18 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:120 D.13615 ] [120])
+            (const_int 2 [0x2]))) libraries\HAL_Drivers\drv_qspi.c:158 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 104 103 105 18 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 110)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:158 194 {arm_cond_branch}
+     (nil)
+ -> 110)
+(note 105 104 106 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 106 105 107 19 (set (reg:SI 3 r3 [147])
+        (const_int 2048 [0x800])) libraries\HAL_Drivers\drv_qspi.c:160 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 107 106 208 19 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 36 [0x24])) [0 Cmdhandler.AddressMode+0 S4 A32])
+        (reg:SI 3 r3 [147])) libraries\HAL_Drivers\drv_qspi.c:160 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 208 107 209 19 (set (pc)
+        (label_ref 119)) 203 {*arm_jump}
+     (nil)
+ -> 119)
+(barrier 209 208 110)
+(code_label 110 209 111 20 25 "" [1 uses])
+(note 111 110 112 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 112 111 113 20 (set (reg/f:SI 3 r3 [148])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:162 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 113 112 114 20 (set (reg:SI 3 r3 [orig:121 D.13615 ] [121])
+        (zero_extend:SI (mem/j:QI (plus:SI (reg/f:SI 3 r3 [148])
+                    (const_int 29 [0x1d])) [0 message_10(D)->address.qspi_lines+0 S1 A8]))) libraries\HAL_Drivers\drv_qspi.c:162 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 114 113 115 20 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:121 D.13615 ] [121])
+            (const_int 4 [0x4]))) libraries\HAL_Drivers\drv_qspi.c:162 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 115 114 116 20 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 119)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:162 194 {arm_cond_branch}
+     (nil)
+ -> 119)
+(note 116 115 117 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 117 116 118 21 (set (reg:SI 3 r3 [149])
+        (const_int 3072 [0xc00])) libraries\HAL_Drivers\drv_qspi.c:164 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 118 117 119 21 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 36 [0x24])) [0 Cmdhandler.AddressMode+0 S4 A32])
+        (reg:SI 3 r3 [149])) libraries\HAL_Drivers\drv_qspi.c:164 615 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 119 118 120 22 23 "" [4 uses])
+(note 120 119 121 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 121 120 122 22 (set (reg/f:SI 3 r3 [150])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:166 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 122 121 123 22 (set (reg:SI 3 r3 [orig:122 D.13615 ] [122])
+        (zero_extend:SI (mem/j:QI (plus:SI (reg/f:SI 3 r3 [150])
+                    (const_int 28 [0x1c])) [0 message_10(D)->address.size+0 S1 A32]))) libraries\HAL_Drivers\drv_qspi.c:166 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 123 122 124 22 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:122 D.13615 ] [122])
+            (const_int 24 [0x18]))) libraries\HAL_Drivers\drv_qspi.c:166 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 124 123 125 22 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 130)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:166 194 {arm_cond_branch}
+     (nil)
+ -> 130)
+(note 125 124 126 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 126 125 127 23 (set (reg:SI 3 r3 [151])
+        (const_int 8192 [0x2000])) libraries\HAL_Drivers\drv_qspi.c:168 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 127 126 210 23 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 Cmdhandler.AddressSize+0 S4 A32])
+        (reg:SI 3 r3 [151])) libraries\HAL_Drivers\drv_qspi.c:168 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 210 127 211 23 (set (pc)
+        (label_ref 134)) 203 {*arm_jump}
+     (nil)
+ -> 134)
+(barrier 211 210 130)
+(code_label 130 211 131 24 26 "" [1 uses])
+(note 131 130 132 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 132 131 133 24 (set (reg:SI 3 r3 [152])
+        (const_int 12288 [0x3000])) libraries\HAL_Drivers\drv_qspi.c:172 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 133 132 134 24 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 Cmdhandler.AddressSize+0 S4 A32])
+        (reg:SI 3 r3 [152])) libraries\HAL_Drivers\drv_qspi.c:172 615 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 134 133 135 25 27 "" [1 uses])
+(note 135 134 136 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 136 135 137 25 (set (reg/f:SI 3 r3 [153])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:174 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 137 136 138 25 (set (reg:SI 3 r3 [orig:123 D.13615 ] [123])
+        (zero_extend:SI (mem/j:QI (plus:SI (reg/f:SI 3 r3 [153])
+                    (const_int 44 [0x2c])) [0 message_10(D)->qspi_data_lines+0 S1 A32]))) libraries\HAL_Drivers\drv_qspi.c:174 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 138 137 139 25 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:123 D.13615 ] [123])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:174 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 139 138 140 25 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 145)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:174 194 {arm_cond_branch}
+     (nil)
+ -> 145)
+(note 140 139 141 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 141 140 142 26 (parallel [
+            (set (reg:SI 3 r3 [154])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:176 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 142 141 212 26 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 44 [0x2c])) [0 Cmdhandler.DataMode+0 S4 A32])
+        (reg:SI 3 r3 [154])) libraries\HAL_Drivers\drv_qspi.c:176 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 212 142 213 26 (set (pc)
+        (label_ref 176)) 203 {*arm_jump}
+     (nil)
+ -> 176)
+(barrier 213 212 145)
+(code_label 145 213 146 27 28 "" [1 uses])
+(note 146 145 147 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn 147 146 148 27 (set (reg/f:SI 3 r3 [155])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:178 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 148 147 149 27 (set (reg:SI 3 r3 [orig:124 D.13615 ] [124])
+        (zero_extend:SI (mem/j:QI (plus:SI (reg/f:SI 3 r3 [155])
+                    (const_int 44 [0x2c])) [0 message_10(D)->qspi_data_lines+0 S1 A32]))) libraries\HAL_Drivers\drv_qspi.c:178 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 149 148 150 27 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:124 D.13615 ] [124])
+            (const_int 1 [0x1]))) libraries\HAL_Drivers\drv_qspi.c:178 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 150 149 151 27 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 156)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:178 194 {arm_cond_branch}
+     (nil)
+ -> 156)
+(note 151 150 152 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(insn 152 151 153 28 (set (reg:SI 3 r3 [156])
+        (const_int 16777216 [0x1000000])) libraries\HAL_Drivers\drv_qspi.c:180 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 153 152 214 28 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 44 [0x2c])) [0 Cmdhandler.DataMode+0 S4 A32])
+        (reg:SI 3 r3 [156])) libraries\HAL_Drivers\drv_qspi.c:180 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 214 153 215 28 (set (pc)
+        (label_ref 176)) 203 {*arm_jump}
+     (nil)
+ -> 176)
+(barrier 215 214 156)
+(code_label 156 215 157 29 30 "" [1 uses])
+(note 157 156 158 29 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(insn 158 157 159 29 (set (reg/f:SI 3 r3 [157])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:182 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 159 158 160 29 (set (reg:SI 3 r3 [orig:125 D.13615 ] [125])
+        (zero_extend:SI (mem/j:QI (plus:SI (reg/f:SI 3 r3 [157])
+                    (const_int 44 [0x2c])) [0 message_10(D)->qspi_data_lines+0 S1 A32]))) libraries\HAL_Drivers\drv_qspi.c:182 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 160 159 161 29 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:125 D.13615 ] [125])
+            (const_int 2 [0x2]))) libraries\HAL_Drivers\drv_qspi.c:182 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 161 160 162 29 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 167)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:182 194 {arm_cond_branch}
+     (nil)
+ -> 167)
+(note 162 161 163 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(insn 163 162 164 30 (set (reg:SI 3 r3 [158])
+        (const_int 33554432 [0x2000000])) libraries\HAL_Drivers\drv_qspi.c:184 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 164 163 216 30 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 44 [0x2c])) [0 Cmdhandler.DataMode+0 S4 A32])
+        (reg:SI 3 r3 [158])) libraries\HAL_Drivers\drv_qspi.c:184 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 216 164 217 30 (set (pc)
+        (label_ref 176)) 203 {*arm_jump}
+     (nil)
+ -> 176)
+(barrier 217 216 167)
+(code_label 167 217 168 31 31 "" [1 uses])
+(note 168 167 169 31 [bb 31] NOTE_INSN_BASIC_BLOCK)
+(insn 169 168 170 31 (set (reg/f:SI 3 r3 [159])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:186 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 170 169 171 31 (set (reg:SI 3 r3 [orig:126 D.13615 ] [126])
+        (zero_extend:SI (mem/j:QI (plus:SI (reg/f:SI 3 r3 [159])
+                    (const_int 44 [0x2c])) [0 message_10(D)->qspi_data_lines+0 S1 A32]))) libraries\HAL_Drivers\drv_qspi.c:186 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 171 170 172 31 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:126 D.13615 ] [126])
+            (const_int 4 [0x4]))) libraries\HAL_Drivers\drv_qspi.c:186 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 172 171 173 31 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 176)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:186 194 {arm_cond_branch}
+     (nil)
+ -> 176)
+(note 173 172 174 32 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(insn 174 173 175 32 (set (reg:SI 3 r3 [160])
+        (const_int 50331648 [0x3000000])) libraries\HAL_Drivers\drv_qspi.c:188 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 175 174 176 32 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 44 [0x2c])) [0 Cmdhandler.DataMode+0 S4 A32])
+        (reg:SI 3 r3 [160])) libraries\HAL_Drivers\drv_qspi.c:188 615 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 176 175 177 33 29 "" [4 uses])
+(note 177 176 178 33 [bb 33] NOTE_INSN_BASIC_BLOCK)
+(insn 178 177 179 33 (parallel [
+            (set (reg:SI 3 r3 [161])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:191 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 179 178 180 33 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 60 [0x3c])) [0 Cmdhandler.SIOOMode+0 S4 A32])
+        (reg:SI 3 r3 [161])) libraries\HAL_Drivers\drv_qspi.c:191 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 180 179 181 33 (parallel [
+            (set (reg:SI 3 r3 [162])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:192 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 181 180 182 33 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 40 [0x28])) [0 Cmdhandler.AlternateByteMode+0 S4 A64])
+        (reg:SI 3 r3 [162])) libraries\HAL_Drivers\drv_qspi.c:192 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 182 181 183 33 (parallel [
+            (set (reg:SI 3 r3 [163])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:193 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 183 182 184 33 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 52 [0x34])) [0 Cmdhandler.DdrMode+0 S4 A32])
+        (reg:SI 3 r3 [163])) libraries\HAL_Drivers\drv_qspi.c:193 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 184 183 185 33 (parallel [
+            (set (reg:SI 3 r3 [164])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:194 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 185 184 186 33 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 56 [0x38])) [0 Cmdhandler.DdrHoldHalfCycle+0 S4 A64])
+        (reg:SI 3 r3 [164])) libraries\HAL_Drivers\drv_qspi.c:194 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 186 185 187 33 (set (reg/f:SI 3 r3 [165])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:195 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 187 186 188 33 (set (reg:SI 3 r3 [orig:127 D.13616 ] [127])
+        (mem/j:SI (plus:SI (reg/f:SI 3 r3 [165])
+                (const_int 8 [0x8])) [0 message_10(D)->parent.length+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:195 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 188 187 189 33 (set (mem/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 48 [0x30])) [0 Cmdhandler.NbData+0 S4 A64])
+        (reg:SI 3 r3 [orig:127 D.13616 ] [127])) libraries\HAL_Drivers\drv_qspi.c:195 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 189 188 190 33 (set (reg/f:SI 3 r3 [orig:128 D.13618 ] [128])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:196 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 190 189 191 33 (set (reg:SI 1 r1 [166])
+        (plus:SI (reg/f:SI 7 r7)
+            (const_int 8 [0x8]))) libraries\HAL_Drivers\drv_qspi.c:196 4 {*arm_addsi3}
+     (nil))
+(insn 191 190 193 33 (set (reg:SI 2 r2)
+        (const_int 5000 [0x1388])) libraries\HAL_Drivers\drv_qspi.c:196 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 193 191 194 33 (set (reg:SI 0 r0)
+        (reg/f:SI 3 r3 [orig:128 D.13618 ] [128])) libraries\HAL_Drivers\drv_qspi.c:196 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 194 193 197 33 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_QSPI_Command") [flags 0x41]  <function_decl 06277d80 HAL_QSPI_Command>) [0 HAL_QSPI_Command S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:196 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 197 194 225 33 (const_int 0 [0]) libraries\HAL_Drivers\drv_qspi.c:197 225 {nop}
+     (nil))
+(note 225 197 226 33 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 226 225 227 33 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 64 [0x40])))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:197 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 64 [0x40])))
+        (nil)))
+(insn 227 226 228 33 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) libraries\HAL_Drivers\drv_qspi.c:197 221 {blockage}
+     (nil))
+(insn/f 228 227 229 33 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) libraries\HAL_Drivers\drv_qspi.c:197 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 229 228 230 33 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) libraries\HAL_Drivers\drv_qspi.c:197 310 {force_register_use}
+     (nil))
+(jump_insn 230 229 231 33 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) libraries\HAL_Drivers\drv_qspi.c:197 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 231 230 233)
+(code_label 233 231 234 33 "" [0 uses])
+(insn 234 233 235 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 235 234 236 32 "" [0 uses])
+(insn 236 235 237 (unspec_volatile [
+            (symbol_ref:SI ("__FUNCTION__.13369") [flags 0x2]  <var_decl 063f0cb8 __FUNCTION__>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 237 236 238 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0652b420 *.LC8>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 238 237 239 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0652b478 *.LC9>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 239 238 240 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 240 239 219)
+(note 219 240 0 NOTE_INSN_DELETED)
+
+;; Function qspixfer (qspixfer, funcdef_no=341, decl_uid=13373, cgraph_uid=343, symbol_order=345)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 159 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 159 5 160 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:200 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 160 159 161 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -32 [0xffffffffffffffe0]))) libraries\HAL_Drivers\drv_qspi.c:200 4 {*arm_addsi3}
+     (nil))
+(insn 161 160 162 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) libraries\HAL_Drivers\drv_qspi.c:200 293 {stack_tie}
+     (nil))
+(insn/f 162 161 163 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:200 4 {*arm_addsi3}
+     (nil))
+(note 163 162 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 163 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 device+0 S4 A32])
+        (reg:SI 0 r0 [ device ])) libraries\HAL_Drivers\drv_qspi.c:200 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])
+        (reg:SI 1 r1 [ message ])) libraries\HAL_Drivers\drv_qspi.c:200 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (parallel [
+            (set (reg:SI 3 r3 [122])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:201 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 8 7 9 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 28 [0x1c])) [0 len+0 S4 A32])
+        (reg:SI 3 r3 [122])) libraries\HAL_Drivers\drv_qspi.c:201 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 3 r3 [123])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:203 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 9 11 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [123])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:203 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 11 10 12 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 17)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:203 194 {arm_cond_branch}
+     (nil)
+ -> 17)
+(note 12 11 13 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 13 12 14 3 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 203 [0xcb]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:203 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 14 13 15 3 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 175) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:203 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 15 14 16 3 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 175)
+                    (const_int 4 [0x4]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:203 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 16 15 17 3 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 059d5680 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:203 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 17 16 18 4 35 "" [1 uses])
+(note 18 17 19 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 4 (set (reg/f:SI 3 r3 [124])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:204 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 20 19 21 4 (set (reg/f:SI 3 r3 [orig:110 D.13621 ] [110])
+        (mem/f/j:SI (plus:SI (reg/f:SI 3 r3 [124])
+                (const_int 80 [0x50])) [0 device_8(D)->bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:204 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 21 20 22 4 (set (reg:CC 100 cc)
+        (compare:CC (reg/f:SI 3 r3 [orig:110 D.13621 ] [110])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:204 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 22 21 23 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 28)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:204 194 {arm_cond_branch}
+     (nil)
+ -> 28)
+(note 23 22 24 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 5 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 204 [0xcc]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:204 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 25 24 26 5 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 175) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:204 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 26 25 27 5 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 175)
+                    (const_int 8 [0x8]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:204 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 27 26 28 5 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 059d5680 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:204 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 28 27 29 6 36 "" [1 uses])
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (set (reg/f:SI 3 r3 [125])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:206 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 31 30 32 6 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [0 qspi_message+0 S4 A32])
+        (reg/f:SI 3 r3 [125])) libraries\HAL_Drivers\drv_qspi.c:206 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 32 31 33 6 (set (reg/f:SI 3 r3 [126])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:207 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 33 32 34 6 (set (reg/f:SI 3 r3 [orig:111 D.13621 ] [111])
+        (mem/f/j:SI (plus:SI (reg/f:SI 3 r3 [126])
+                (const_int 80 [0x50])) [0 device_8(D)->bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:207 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 34 33 35 6 (set (reg/f:SI 3 r3 [127])
+        (mem/f/j:SI (plus:SI (reg/f:SI 3 r3 [orig:111 D.13621 ] [111])
+                (const_int 76 [0x4c])) [0 _15->parent.user_data+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:207 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 35 34 36 6 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_bus+0 S4 A32])
+        (reg/f:SI 3 r3 [127])) libraries\HAL_Drivers\drv_qspi.c:207 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 36 35 37 6 (set (reg/f:SI 3 r3 [128])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:212 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 37 36 38 6 (set (reg/f:SI 3 r3 [129])
+        (mem/f/j:SI (reg/f:SI 3 r3 [128]) [0 message_13(D)->send_buf+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:212 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 38 37 39 6 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])) [0 sndb+0 S4 A32])
+        (reg/f:SI 3 r3 [129])) libraries\HAL_Drivers\drv_qspi.c:212 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 39 38 40 6 (set (reg/f:SI 3 r3 [130])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:213 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 40 39 41 6 (set (reg/f:SI 3 r3 [131])
+        (mem/f/j:SI (plus:SI (reg/f:SI 3 r3 [130])
+                (const_int 4 [0x4])) [0 message_13(D)->recv_buf+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:213 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 41 40 42 6 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 rcvb+0 S4 A32])
+        (reg/f:SI 3 r3 [131])) libraries\HAL_Drivers\drv_qspi.c:213 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 42 41 43 6 (set (reg/f:SI 3 r3 [132])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:214 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 43 42 44 6 (set (reg:SI 3 r3 [orig:112 D.13622 ] [112])
+        (mem/j:SI (plus:SI (reg/f:SI 3 r3 [132])
+                (const_int 8 [0x8])) [0 message_13(D)->length+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:214 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 44 43 45 6 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [0 length+0 S4 A32])
+        (reg:SI 3 r3 [orig:112 D.13622 ] [112])) libraries\HAL_Drivers\drv_qspi.c:214 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 45 44 46 6 (set (reg:SI 3 r3 [133])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])) [0 sndb+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:224 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 46 45 47 6 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [133])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:224 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 47 46 48 6 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 96)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:224 194 {arm_cond_branch}
+     (nil)
+ -> 96)
+(note 48 47 49 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 49 48 50 7 (set (reg:SI 1 r1)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [0 qspi_message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:226 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 50 49 51 7 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:226 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 51 50 52 7 (parallel [
+            (call (mem:SI (symbol_ref:SI ("qspi_send_cmd") [flags 0x3]  <function_decl 064bef80 qspi_send_cmd>) [0 qspi_send_cmd S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:226 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 52 51 53 7 (set (reg/f:SI 3 r3 [134])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [0 qspi_message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:227 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 53 52 54 7 (set (reg:SI 3 r3 [orig:113 D.13622 ] [113])
+        (mem/j:SI (plus:SI (reg/f:SI 3 r3 [134])
+                (const_int 8 [0x8])) [0 qspi_message_14->parent.length+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:227 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 54 53 55 7 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:113 D.13622 ] [113])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:227 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 55 54 56 7 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 88)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:227 194 {arm_cond_branch}
+     (nil)
+ -> 88)
+(note 56 55 57 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 57 56 58 8 (set (reg/f:SI 3 r3 [orig:114 D.13623 ] [114])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:229 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 58 57 59 8 (set (reg:SI 2 r2)
+        (const_int 5000 [0x1388])) libraries\HAL_Drivers\drv_qspi.c:229 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 59 58 60 8 (set (reg:SI 1 r1)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])) [0 sndb+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:229 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 60 59 61 8 (set (reg:SI 0 r0)
+        (reg/f:SI 3 r3 [orig:114 D.13623 ] [114])) libraries\HAL_Drivers\drv_qspi.c:229 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 61 60 62 8 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_QSPI_Transmit") [flags 0x41]  <function_decl 06277e00 HAL_QSPI_Transmit>) [0 HAL_QSPI_Transmit S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:229 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 62 61 64 8 (set (reg:SI 3 r3 [135])
+        (reg:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:229 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 64 62 65 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:115 D.13624 ] [115])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:229 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 65 64 66 8 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 71)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:229 194 {arm_cond_branch}
+     (nil)
+ -> 71)
+(note 66 65 67 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 67 66 68 9 (set (reg:SI 3 r3 [136])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [0 length+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:231 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 68 67 146 9 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 28 [0x1c])) [0 len+0 S4 A32])
+        (reg:SI 3 r3 [136])) libraries\HAL_Drivers\drv_qspi.c:231 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 146 68 147 9 (set (pc)
+        (label_ref 134)) 203 {*arm_jump}
+     (nil)
+ -> 134)
+(barrier 147 146 71)
+(code_label 71 147 72 10 39 "" [1 uses])
+(note 72 71 73 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 73 72 74 10 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 175)
+                    (const_int 12 [0xc]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:235 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 74 73 75 10 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:235 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 75 74 76 10 (set (reg/f:SI 3 r3 [137])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:235 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 76 75 77 10 (set (reg:SI 3 r3 [orig:116 D.13622 ] [116])
+        (mem/v/j:SI (plus:SI (reg/f:SI 3 r3 [137])
+                (const_int 60 [0x3c])) [0 qspi_bus_16->QSPI_Handler.ErrorCode+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:235 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 77 76 78 10 (set (reg:SI 1 r1)
+        (reg:SI 3 r3 [orig:116 D.13622 ] [116])) libraries\HAL_Drivers\drv_qspi.c:235 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 78 77 79 10 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 175)
+                    (const_int 16 [0x10]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:235 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 79 78 80 10 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:235 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 80 79 81 10 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 175)
+                    (const_int 20 [0x14]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:235 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 81 80 82 10 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:235 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 82 81 83 10 (set (reg/f:SI 3 r3 [138])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:236 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 83 82 85 10 (parallel [
+            (set (reg:SI 2 r2 [139])
+                (const_int 1 [0x1]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:236 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 85 83 148 10 (set (mem/v/j:QI (plus:SI (reg/f:SI 3 r3 [138])
+                (const_int 57 [0x39])) [0 qspi_bus_16->QSPI_Handler.State+0 S1 A8])
+        (reg:QI 2 r2 [140])) libraries\HAL_Drivers\drv_qspi.c:236 182 {*arm_movqi_insn}
+     (nil))
+(jump_insn 148 85 149 10 (set (pc)
+        (label_ref 134)) libraries\HAL_Drivers\drv_qspi.c:237 203 {*arm_jump}
+     (nil)
+ -> 134)
+(barrier 149 148 88)
+(code_label 88 149 89 11 38 "" [1 uses])
+(note 89 88 90 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 90 89 91 11 (parallel [
+            (set (reg:SI 3 r3 [141])
+                (const_int 1 [0x1]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:242 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 91 90 150 11 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 28 [0x1c])) [0 len+0 S4 A32])
+        (reg:SI 3 r3 [141])) libraries\HAL_Drivers\drv_qspi.c:242 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 150 91 151 11 (set (pc)
+        (label_ref 134)) 203 {*arm_jump}
+     (nil)
+ -> 134)
+(barrier 151 150 96)
+(code_label 96 151 97 12 37 "" [1 uses])
+(note 97 96 98 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 98 97 99 12 (set (reg:SI 3 r3 [142])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 rcvb+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:245 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 99 98 100 12 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [142])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:245 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 100 99 101 12 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 134)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:245 194 {arm_cond_branch}
+     (nil)
+ -> 134)
+(note 101 100 102 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 102 101 103 13 (set (reg:SI 1 r1)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [0 qspi_message+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:247 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 103 102 104 13 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:247 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 104 103 105 13 (parallel [
+            (call (mem:SI (symbol_ref:SI ("qspi_send_cmd") [flags 0x3]  <function_decl 064bef80 qspi_send_cmd>) [0 qspi_send_cmd S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:247 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 105 104 106 13 (set (reg/f:SI 3 r3 [orig:117 D.13623 ] [117])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:251 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 106 105 107 13 (set (reg:SI 2 r2)
+        (const_int 5000 [0x1388])) libraries\HAL_Drivers\drv_qspi.c:251 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 107 106 108 13 (set (reg:SI 1 r1)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 rcvb+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:251 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 108 107 109 13 (set (reg:SI 0 r0)
+        (reg/f:SI 3 r3 [orig:117 D.13623 ] [117])) libraries\HAL_Drivers\drv_qspi.c:251 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 109 108 110 13 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("HAL_QSPI_Receive") [flags 0x41]  <function_decl 06277e80 HAL_QSPI_Receive>) [0 HAL_QSPI_Receive S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:251 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 110 109 112 13 (set (reg:SI 3 r3 [143])
+        (reg:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:251 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 112 110 113 13 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:118 D.13624 ] [118])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:251 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 113 112 114 13 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 119)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:251 194 {arm_cond_branch}
+     (nil)
+ -> 119)
+(note 114 113 115 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 115 114 116 14 (set (reg:SI 3 r3 [144])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [0 length+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:254 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 116 115 152 14 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 28 [0x1c])) [0 len+0 S4 A32])
+        (reg:SI 3 r3 [144])) libraries\HAL_Drivers\drv_qspi.c:254 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 152 116 153 14 (set (pc)
+        (label_ref 134)) 203 {*arm_jump}
+     (nil)
+ -> 134)
+(barrier 153 152 119)
+(code_label 119 153 120 15 42 "" [1 uses])
+(note 120 119 121 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 121 120 122 15 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 175)
+                    (const_int 12 [0xc]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:261 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 122 121 123 15 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:261 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 123 122 124 15 (set (reg/f:SI 3 r3 [145])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:261 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 124 123 125 15 (set (reg:SI 3 r3 [orig:119 D.13622 ] [119])
+        (mem/v/j:SI (plus:SI (reg/f:SI 3 r3 [145])
+                (const_int 60 [0x3c])) [0 qspi_bus_16->QSPI_Handler.ErrorCode+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:261 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 125 124 126 15 (set (reg:SI 1 r1)
+        (reg:SI 3 r3 [orig:119 D.13622 ] [119])) libraries\HAL_Drivers\drv_qspi.c:261 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 126 125 127 15 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 175)
+                    (const_int 24 [0x18]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:261 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 127 126 128 15 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:261 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 128 127 129 15 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 175)
+                    (const_int 20 [0x14]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:261 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 129 128 130 15 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:261 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 130 129 131 15 (set (reg/f:SI 3 r3 [146])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:262 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 131 130 133 15 (parallel [
+            (set (reg:SI 2 r2 [147])
+                (const_int 1 [0x1]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:262 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 133 131 155 15 (set (mem/v/j:QI (plus:SI (reg/f:SI 3 r3 [146])
+                (const_int 57 [0x39])) [0 qspi_bus_16->QSPI_Handler.State+0 S1 A8])
+        (reg:QI 2 r2 [148])) libraries\HAL_Drivers\drv_qspi.c:262 182 {*arm_movqi_insn}
+     (nil))
+(insn 155 133 134 15 (const_int 0 [0]) libraries\HAL_Drivers\drv_qspi.c:263 225 {nop}
+     (nil))
+(code_label 134 155 135 16 41 ("__exit") [5 uses])
+(note 135 134 136 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 136 135 143 16 (set (reg:SI 3 r3 [orig:120 D.13625 ] [120])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 28 [0x1c])) [0 len+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:274 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 143 136 144 16 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:121 <retval> ] [121])) libraries\HAL_Drivers\drv_qspi.c:275 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 144 143 164 16 (use (reg/i:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:275 -1
+     (nil))
+(note 164 144 165 16 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 165 164 166 16 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:275 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 32 [0x20])))
+        (nil)))
+(insn 166 165 167 16 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) libraries\HAL_Drivers\drv_qspi.c:275 221 {blockage}
+     (nil))
+(insn/f 167 166 168 16 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) libraries\HAL_Drivers\drv_qspi.c:275 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 168 167 169 16 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) libraries\HAL_Drivers\drv_qspi.c:275 310 {force_register_use}
+     (nil))
+(jump_insn 169 168 170 16 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) libraries\HAL_Drivers\drv_qspi.c:275 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 170 169 173)
+(code_label 173 170 174 45 "" [0 uses])
+(insn 174 173 175 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 175 174 176 44 "" [0 uses])
+(insn 176 175 177 (unspec_volatile [
+            (symbol_ref:SI ("__FUNCTION__.13376") [flags 0x2]  <var_decl 063f0dc0 __FUNCTION__>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 177 176 178 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 064f5f78 *.LC0>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 178 177 179 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0652b688 *.LC10>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 179 178 180 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0652b0b0 *.LC2>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 180 179 181 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0652b6e0 *.LC11>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 181 180 182 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0652b160 *.LC4>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 182 181 183 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0652b738 *.LC12>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 183 182 184 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 184 183 158)
+(note 158 184 0 NOTE_INSN_DELETED)
+
+;; Function qspi_configure (qspi_configure, funcdef_no=342, decl_uid=13385, cgraph_uid=344, symbol_order=346)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 46 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 46 5 47 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:278 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 47 46 48 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -16 [0xfffffffffffffff0]))) libraries\HAL_Drivers\drv_qspi.c:278 4 {*arm_addsi3}
+     (nil))
+(insn 48 47 49 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) libraries\HAL_Drivers\drv_qspi.c:278 293 {stack_tie}
+     (nil))
+(insn/f 49 48 50 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:278 4 {*arm_addsi3}
+     (nil))
+(note 50 49 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 50 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 device+0 S4 A32])
+        (reg:SI 0 r0 [ device ])) libraries\HAL_Drivers\drv_qspi.c:278 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (reg/f:SI 7 r7) [0 configuration+0 S4 A32])
+        (reg:SI 1 r1 [ configuration ])) libraries\HAL_Drivers\drv_qspi.c:278 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:SI 3 r3 [113])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:279 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [113])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:279 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 9 8 10 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 15)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:279 194 {arm_cond_branch}
+     (nil)
+ -> 15)
+(note 10 9 11 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 12 3 (set (reg:SI 2 r2)
+        (const_int 279 [0x117])) libraries\HAL_Drivers\drv_qspi.c:279 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 3 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 61) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:279 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 3 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 61)
+                    (const_int 4 [0x4]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:279 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 14 13 15 3 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 059d5680 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:279 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 15 14 16 4 47 "" [1 uses])
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 4 (set (reg:SI 3 r3 [114])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 configuration+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:280 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 17 19 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [114])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:280 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 19 18 20 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 25)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:280 194 {arm_cond_branch}
+     (nil)
+ -> 25)
+(note 20 19 21 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 5 (set (reg:SI 2 r2)
+        (const_int 280 [0x118])) libraries\HAL_Drivers\drv_qspi.c:280 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 21 23 5 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 61) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:280 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 23 22 24 5 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 61)
+                    (const_int 8 [0x8]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:280 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 24 23 25 5 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 059d5680 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:280 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 25 24 26 6 48 "" [1 uses])
+(note 26 25 27 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 6 (set (reg/f:SI 3 r3 [115])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:282 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 28 27 29 6 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 qspi_device+0 S4 A32])
+        (reg/f:SI 3 r3 [115])) libraries\HAL_Drivers\drv_qspi.c:282 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 29 28 30 6 (set (reg:SI 3 r3 [116])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 qspi_device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:283 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 30 29 31 6 (parallel [
+            (set (reg/f:SI 3 r3 [orig:110 D.13629 ] [110])
+                (plus:SI (reg:SI 3 r3 [116])
+                    (const_int 96 [0x60])))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:283 831 {*thumb2_addsi_short}
+     (nil))
+(insn 31 30 32 6 (set (reg:SI 1 r1)
+        (reg/f:SI 3 r3 [orig:110 D.13629 ] [110])) libraries\HAL_Drivers\drv_qspi.c:283 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 32 31 33 6 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 qspi_device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:283 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 33 32 34 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("stm32_qspi_init") [flags 0x3]  <function_decl 064bee80 stm32_qspi_init>) [0 stm32_qspi_init S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:283 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 34 33 41 6 (set (reg:SI 3 r3 [orig:111 D.13630 ] [111])
+        (reg:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:283 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 41 34 42 6 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:112 <retval> ] [112])) libraries\HAL_Drivers\drv_qspi.c:284 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 42 41 51 6 (use (reg/i:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:284 -1
+     (nil))
+(note 51 42 52 6 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 52 51 53 6 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:284 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])))
+        (nil)))
+(insn 53 52 54 6 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) libraries\HAL_Drivers\drv_qspi.c:284 221 {blockage}
+     (nil))
+(insn/f 54 53 55 6 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) libraries\HAL_Drivers\drv_qspi.c:284 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 55 54 56 6 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) libraries\HAL_Drivers\drv_qspi.c:284 310 {force_register_use}
+     (nil))
+(jump_insn 56 55 57 6 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) libraries\HAL_Drivers\drv_qspi.c:284 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 57 56 59)
+(code_label 59 57 60 51 "" [0 uses])
+(insn 60 59 61 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 61 60 62 50 "" [0 uses])
+(insn 62 61 63 (unspec_volatile [
+            (symbol_ref:SI ("__FUNCTION__.13387") [flags 0x2]  <var_decl 064e0058 __FUNCTION__>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 63 62 64 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 064f5f78 *.LC0>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 64 63 65 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0652b790 *.LC13>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 65 64 66 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 66 65 45)
+(note 45 66 0 NOTE_INSN_DELETED)
+
+;; Function stm32_qspi_register_bus (stm32_qspi_register_bus, funcdef_no=343, decl_uid=13392, cgraph_uid=345, symbol_order=348)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 46 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 46 5 47 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:293 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 47 46 48 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -8 [0xfffffffffffffff8]))) libraries\HAL_Drivers\drv_qspi.c:293 4 {*arm_addsi3}
+     (nil))
+(insn 48 47 49 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) libraries\HAL_Drivers\drv_qspi.c:293 293 {stack_tie}
+     (nil))
+(insn/f 49 48 50 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:293 4 {*arm_addsi3}
+     (nil))
+(note 50 49 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 50 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 qspi_bus+0 S4 A32])
+        (reg:SI 0 r0 [ qspi_bus ])) libraries\HAL_Drivers\drv_qspi.c:293 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (reg/f:SI 7 r7) [0 name+0 S4 A32])
+        (reg:SI 1 r1 [ name ])) libraries\HAL_Drivers\drv_qspi.c:293 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:SI 3 r3 [112])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:294 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [112])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:294 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 9 8 10 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 15)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:294 194 {arm_cond_branch}
+     (nil)
+ -> 15)
+(note 10 9 11 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 12 3 (set (reg:SI 2 r2)
+        (const_int 294 [0x126])) libraries\HAL_Drivers\drv_qspi.c:294 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 3 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 61) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:294 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 3 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 61)
+                    (const_int 4 [0x4]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:294 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 14 13 15 3 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 059d5680 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:294 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 15 14 16 4 53 "" [1 uses])
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 4 (set (reg:SI 3 r3 [113])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 name+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:295 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 17 19 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [113])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:295 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 19 18 20 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 25)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:295 194 {arm_cond_branch}
+     (nil)
+ -> 25)
+(note 20 19 21 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 5 (set (reg:SI 2 r2)
+        (const_int 295 [0x127])) libraries\HAL_Drivers\drv_qspi.c:295 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 21 23 5 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 61) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:295 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 23 22 24 5 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 61)
+                    (const_int 8 [0x8]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:295 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 24 23 25 5 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 059d5680 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:295 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 25 24 26 6 54 "" [1 uses])
+(note 26 25 27 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 6 (set (reg/f:SI 2 r2 [114])
+        (mem:SI (const:SI (plus:SI (label_ref 61)
+                    (const_int 12 [0xc]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:297 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 28 27 29 6 (set (reg/f:SI 3 r3 [115])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 qspi_bus+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:297 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 29 28 30 6 (set (mem/f/j/c:SI (plus:SI (reg/f:SI 2 r2 [114])
+                (const_int 76 [0x4c])) [0 _qspi_bus1.parent.user_data+0 S4 A32])
+        (reg/f:SI 3 r3 [115])) libraries\HAL_Drivers\drv_qspi.c:297 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 30 29 31 6 (set (reg:SI 2 r2)
+        (mem:SI (const:SI (plus:SI (label_ref 61)
+                    (const_int 16 [0x10]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:298 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 31 30 32 6 (set (reg:SI 1 r1)
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 name+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:298 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 32 31 33 6 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 61)
+                    (const_int 12 [0xc]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:298 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 33 32 34 6 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_qspi_bus_register") [flags 0x41]  <function_decl 06416180 rt_qspi_bus_register>) [0 rt_qspi_bus_register S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:298 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 34 33 41 6 (set (reg:SI 3 r3 [orig:110 D.13632 ] [110])
+        (reg:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:298 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 41 34 42 6 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:111 <retval> ] [111])) libraries\HAL_Drivers\drv_qspi.c:299 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 42 41 51 6 (use (reg/i:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:299 -1
+     (nil))
+(note 51 42 52 6 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 52 51 53 6 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:299 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])))
+        (nil)))
+(insn 53 52 54 6 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) libraries\HAL_Drivers\drv_qspi.c:299 221 {blockage}
+     (nil))
+(insn/f 54 53 55 6 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) libraries\HAL_Drivers\drv_qspi.c:299 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 55 54 56 6 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) libraries\HAL_Drivers\drv_qspi.c:299 310 {force_register_use}
+     (nil))
+(jump_insn 56 55 57 6 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) libraries\HAL_Drivers\drv_qspi.c:299 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 57 56 59)
+(code_label 59 57 60 57 "" [0 uses])
+(insn 60 59 61 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 61 60 62 56 "" [0 uses])
+(insn 62 61 63 (unspec_volatile [
+            (symbol_ref:SI ("__FUNCTION__.13394") [flags 0x2]  <var_decl 064e0160 __FUNCTION__>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 63 62 64 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0652b420 *.LC8>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 64 63 65 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0652b7e8 *.LC14>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 65 64 66 (unspec_volatile [
+            (symbol_ref:SI ("_qspi_bus1")  <var_decl 063f08f0 _qspi_bus1>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 66 65 67 (unspec_volatile [
+            (symbol_ref:SI ("stm32_qspi_ops") [flags 0x2]  <var_decl 064e0108 stm32_qspi_ops>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 67 66 68 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 68 67 45)
+(note 45 68 0 NOTE_INSN_DELETED)
+
+;; Function stm32_qspi_bus_attach_device (stm32_qspi_bus_attach_device, funcdef_no=344, decl_uid=13344, cgraph_uid=346, symbol_order=349)
+
+(note 1 0 9 NOTE_INSN_DELETED)
+(note 9 1 153 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 153 9 154 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:312 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 154 153 155 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -32 [0xffffffffffffffe0]))) libraries\HAL_Drivers\drv_qspi.c:312 4 {*arm_addsi3}
+     (nil))
+(insn 155 154 156 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) libraries\HAL_Drivers\drv_qspi.c:312 293 {stack_tie}
+     (nil))
+(insn/f 156 155 157 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:312 4 {*arm_addsi3}
+     (nil))
+(note 157 156 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 157 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 bus_name+0 S4 A32])
+        (reg:SI 0 r0 [ bus_name ])) libraries\HAL_Drivers\drv_qspi.c:312 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [0 device_name+0 S4 A32])
+        (reg:SI 1 r1 [ device_name ])) libraries\HAL_Drivers\drv_qspi.c:312 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 4 3 7 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 pin+0 S4 A32])
+        (reg:SI 2 r2 [ pin ])) libraries\HAL_Drivers\drv_qspi.c:312 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 7 4 8 2 (set (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                (const_int 3 [0x3])) [0 data_line_width+0 S1 A8])
+        (reg:QI 3 r3 [115])) libraries\HAL_Drivers\drv_qspi.c:312 182 {*arm_movqi_insn}
+     (nil))
+(note 8 7 11 2 NOTE_INSN_FUNCTION_BEG)
+(insn 11 8 12 2 (parallel [
+            (set (reg:SI 3 r3 [116])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:313 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 12 11 13 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_device+0 S4 A32])
+        (reg:SI 3 r3 [116])) libraries\HAL_Drivers\drv_qspi.c:313 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 2 (parallel [
+            (set (reg:SI 3 r3 [117])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:314 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 14 13 15 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 28 [0x1c])) [0 cs_pin+0 S4 A32])
+        (reg:SI 3 r3 [117])) libraries\HAL_Drivers\drv_qspi.c:314 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 15 14 16 2 (parallel [
+            (set (reg:SI 3 r3 [118])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:315 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 16 15 17 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [0 result+0 S4 A32])
+        (reg:SI 3 r3 [118])) libraries\HAL_Drivers\drv_qspi.c:315 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 3 r3 [119])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 bus_name+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:317 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 17 19 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [119])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:317 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 19 18 20 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 25)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:317 194 {arm_cond_branch}
+     (nil)
+ -> 25)
+(note 20 19 21 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 3 (set (reg:SI 2 r2)
+        (const_int 317 [0x13d])) libraries\HAL_Drivers\drv_qspi.c:317 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 21 23 3 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 169) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:317 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 23 22 24 3 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 169)
+                    (const_int 4 [0x4]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:317 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 24 23 25 3 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 059d5680 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:317 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 25 24 26 4 59 "" [1 uses])
+(note 26 25 27 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 4 (set (reg:SI 3 r3 [120])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [0 device_name+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:318 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 28 27 29 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [120])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:318 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 29 28 30 4 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 35)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:318 194 {arm_cond_branch}
+     (nil)
+ -> 35)
+(note 30 29 31 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 5 (set (reg:SI 2 r2)
+        (const_int 318 [0x13e])) libraries\HAL_Drivers\drv_qspi.c:318 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 32 31 33 5 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 169) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:318 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 33 32 34 5 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 169)
+                    (const_int 8 [0x8]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:318 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 34 33 35 5 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 059d5680 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:318 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 35 34 36 6 60 "" [1 uses])
+(note 36 35 37 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 37 36 38 6 (set (reg:SI 3 r3 [121])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 3 [0x3])) [0 data_line_width+0 S1 A8]))) libraries\HAL_Drivers\drv_qspi.c:319 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 38 37 39 6 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [121])
+            (const_int 1 [0x1]))) libraries\HAL_Drivers\drv_qspi.c:319 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 39 38 40 6 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 53)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:319 194 {arm_cond_branch}
+     (nil)
+ -> 53)
+(note 40 39 41 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 42 7 (set (reg:SI 3 r3 [122])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 3 [0x3])) [0 data_line_width+0 S1 A8]))) libraries\HAL_Drivers\drv_qspi.c:319 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 42 41 43 7 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [122])
+            (const_int 2 [0x2]))) libraries\HAL_Drivers\drv_qspi.c:319 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 43 42 44 7 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 53)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:319 194 {arm_cond_branch}
+     (nil)
+ -> 53)
+(note 44 43 45 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 45 44 46 8 (set (reg:SI 3 r3 [123])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 3 [0x3])) [0 data_line_width+0 S1 A8]))) libraries\HAL_Drivers\drv_qspi.c:319 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 46 45 47 8 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [123])
+            (const_int 4 [0x4]))) libraries\HAL_Drivers\drv_qspi.c:319 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 47 46 48 8 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 53)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:319 194 {arm_cond_branch}
+     (nil)
+ -> 53)
+(note 48 47 49 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 49 48 50 9 (set (reg:SI 2 r2)
+        (const_int 319 [0x13f])) libraries\HAL_Drivers\drv_qspi.c:319 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 50 49 51 9 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 169) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:319 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 51 50 52 9 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 169)
+                    (const_int 12 [0xc]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:319 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 52 51 53 9 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_assert_handler") [flags 0x41]  <function_decl 059d5680 rt_assert_handler>) [0 rt_assert_handler S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:319 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(code_label 53 52 54 10 61 "" [3 uses])
+(note 54 53 55 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 56 10 (parallel [
+            (set (reg:SI 0 r0)
+                (const_int 120 [0x78]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:321 830 {*thumb2_movsi_shortim}
+     (nil))
+(call_insn 56 55 57 10 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_malloc") [flags 0x41]  <function_decl 059c4d00 rt_malloc>) [0 rt_malloc S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:321 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 57 56 58 10 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_device+0 S4 A32])
+        (reg:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:321 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 58 57 59 10 (set (reg:SI 3 r3 [124])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:322 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 59 58 60 10 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [124])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:322 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 60 59 61 10 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 72)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:322 194 {arm_cond_branch}
+     (nil)
+ -> 72)
+(note 61 60 62 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 62 61 63 11 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 169)
+                    (const_int 16 [0x10]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:324 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 63 62 64 11 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:324 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 64 63 65 11 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 169)
+                    (const_int 20 [0x14]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:324 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 65 64 66 11 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:324 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 66 65 67 11 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 169)
+                    (const_int 24 [0x18]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:324 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 67 66 68 11 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:324 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 68 67 69 11 (parallel [
+            (set (reg:SI 3 r3 [125])
+                (const_int 5 [0x5]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:325 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 69 68 146 11 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [0 result+0 S4 A32])
+        (reg:SI 3 r3 [125])) libraries\HAL_Drivers\drv_qspi.c:325 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 146 69 147 11 (set (pc)
+        (label_ref 114)) libraries\HAL_Drivers\drv_qspi.c:326 203 {*arm_jump}
+     (nil)
+ -> 114)
+(barrier 147 146 72)
+(code_label 72 147 73 12 62 "" [1 uses])
+(note 73 72 74 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 74 73 75 12 (parallel [
+            (set (reg:SI 0 r0)
+                (const_int 2 [0x2]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:328 830 {*thumb2_movsi_shortim}
+     (nil))
+(call_insn 75 74 76 12 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_malloc") [flags 0x41]  <function_decl 059c4d00 rt_malloc>) [0 rt_malloc S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:328 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 76 75 77 12 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 28 [0x1c])) [0 cs_pin+0 S4 A32])
+        (reg:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:328 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 77 76 78 12 (set (reg:SI 3 r3 [126])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:329 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 78 77 79 12 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [126])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:329 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 79 78 80 12 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 91)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:329 194 {arm_cond_branch}
+     (nil)
+ -> 91)
+(note 80 79 81 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 81 80 82 13 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 169)
+                    (const_int 16 [0x10]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:331 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 82 81 83 13 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:331 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 83 82 84 13 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 169)
+                    (const_int 20 [0x14]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:331 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 84 83 85 13 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:331 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 85 84 86 13 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 169)
+                    (const_int 24 [0x18]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:331 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 86 85 87 13 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 059cf900 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:331 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 87 86 88 13 (parallel [
+            (set (reg:SI 3 r3 [127])
+                (const_int 5 [0x5]))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:332 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 88 87 148 13 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [0 result+0 S4 A32])
+        (reg:SI 3 r3 [127])) libraries\HAL_Drivers\drv_qspi.c:332 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 148 88 149 13 (set (pc)
+        (label_ref 114)) libraries\HAL_Drivers\drv_qspi.c:333 203 {*arm_jump}
+     (nil)
+ -> 114)
+(barrier 149 148 91)
+(code_label 91 149 92 14 64 "" [1 uses])
+(note 92 91 93 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 93 92 94 14 (set (reg/f:SI 3 r3 [128])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:336 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 94 93 95 14 (set (reg/f:SI 2 r2 [129])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 40 [0x28])) [0 enter_qspi_mode+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:336 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 95 94 96 14 (set (mem/f/j:SI (plus:SI (reg/f:SI 3 r3 [128])
+                (const_int 112 [0x70])) [0 qspi_device_20->enter_qspi_mode+0 S4 A32])
+        (reg/f:SI 2 r2 [129])) libraries\HAL_Drivers\drv_qspi.c:336 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 96 95 97 14 (set (reg/f:SI 3 r3 [130])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:337 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 97 96 98 14 (set (reg/f:SI 2 r2 [131])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 44 [0x2c])) [0 exit_qspi_mode+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:337 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 98 97 99 14 (set (mem/f/j:SI (plus:SI (reg/f:SI 3 r3 [130])
+                (const_int 116 [0x74])) [0 qspi_device_20->exit_qspi_mode+0 S4 A32])
+        (reg/f:SI 2 r2 [131])) libraries\HAL_Drivers\drv_qspi.c:337 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 99 98 100 14 (set (reg/f:SI 3 r3 [132])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:338 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 100 99 101 14 (set (reg:QI 2 r2 [133])
+        (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                (const_int 3 [0x3])) [0 data_line_width+0 S1 A8])) libraries\HAL_Drivers\drv_qspi.c:338 182 {*arm_movqi_insn}
+     (nil))
+(insn 101 100 102 14 (set (mem/j:QI (plus:SI (reg/f:SI 3 r3 [132])
+                (const_int 109 [0x6d])) [0 qspi_device_20->config.qspi_dl_width+0 S1 A8])
+        (reg:QI 2 r2 [133])) libraries\HAL_Drivers\drv_qspi.c:338 182 {*arm_movqi_insn}
+     (nil))
+(insn 102 101 103 14 (set (reg:SI 3 r3 [134])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 pin+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:340 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 103 102 104 14 (set (reg:SI 2 r2 [orig:110 D.13634 ] [110])
+        (zero_extend:SI (reg:HI 3 r3 [134]))) libraries\HAL_Drivers\drv_qspi.c:340 820 {*thumb2_zero_extendhisi2_v6}
+     (nil))
+(insn 104 103 106 14 (set (reg/f:SI 3 r3 [135])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 28 [0x1c])) [0 cs_pin+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:340 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 106 104 107 14 (set (mem/j:HI (reg/f:SI 3 r3 [135]) [0 cs_pin_26->Pin+0 S2 A16])
+        (reg:HI 2 r2 [136])) libraries\HAL_Drivers\drv_qspi.c:340 795 {*thumb2_movhi_insn}
+     (nil))
+(insn 107 106 108 14 (set (reg/f:SI 0 r0 [orig:111 D.13635 ] [111])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:346 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 108 107 109 14 (set (reg:SI 3 r3)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 28 [0x1c])) [0 cs_pin+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:346 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 109 108 110 14 (set (reg:SI 2 r2)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 bus_name+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:346 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 110 109 112 14 (set (reg:SI 1 r1)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [0 device_name+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:346 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 112 110 113 14 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_spi_bus_attach_device") [flags 0x41]  <function_decl 06406a80 rt_spi_bus_attach_device>) [0 rt_spi_bus_attach_device S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:346 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 113 112 114 14 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [0 result+0 S4 A32])
+        (reg:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:346 615 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 114 113 115 15 63 ("__exit") [2 uses])
+(note 115 114 116 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 116 115 117 15 (set (reg:SI 3 r3 [137])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [0 result+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:349 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 117 116 118 15 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [137])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:349 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 118 117 119 15 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 134)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:349 194 {arm_cond_branch}
+     (nil)
+ -> 134)
+(note 119 118 120 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 120 119 121 16 (set (reg:SI 3 r3 [138])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:351 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 121 120 122 16 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [138])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:351 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 122 121 123 16 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 126)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:351 194 {arm_cond_branch}
+     (nil)
+ -> 126)
+(note 123 122 124 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 124 123 125 17 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [0 qspi_device+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:353 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 125 124 126 17 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_free") [flags 0x41]  <function_decl 059c4d80 rt_free>) [0 rt_free S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:353 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(code_label 126 125 127 18 66 "" [1 uses])
+(note 127 126 128 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 128 127 129 18 (set (reg:SI 3 r3 [139])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 28 [0x1c])) [0 cs_pin+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:356 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 129 128 130 18 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [139])
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:356 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 130 129 131 18 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 134)
+            (pc))) libraries\HAL_Drivers\drv_qspi.c:356 194 {arm_cond_branch}
+     (nil)
+ -> 134)
+(note 131 130 132 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 132 131 133 19 (set (reg:SI 0 r0)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 28 [0x1c])) [0 cs_pin+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:358 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 133 132 134 19 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_free") [flags 0x41]  <function_decl 059c4d80 rt_free>) [0 rt_free S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:358 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(code_label 134 133 135 20 65 "" [2 uses])
+(note 135 134 136 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 136 135 143 20 (set (reg:SI 3 r3 [orig:112 D.13636 ] [112])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [0 result+0 S4 A32])) libraries\HAL_Drivers\drv_qspi.c:362 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 143 136 144 20 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:113 <retval> ] [113])) libraries\HAL_Drivers\drv_qspi.c:363 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 144 143 158 20 (use (reg/i:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:363 -1
+     (nil))
+(note 158 144 159 20 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 159 158 160 20 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 100 cc))
+        ]) libraries\HAL_Drivers\drv_qspi.c:363 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 32 [0x20])))
+        (nil)))
+(insn 160 159 161 20 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) libraries\HAL_Drivers\drv_qspi.c:363 221 {blockage}
+     (nil))
+(insn/f 161 160 162 20 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) libraries\HAL_Drivers\drv_qspi.c:363 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 162 161 163 20 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) libraries\HAL_Drivers\drv_qspi.c:363 310 {force_register_use}
+     (nil))
+(jump_insn 163 162 164 20 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) libraries\HAL_Drivers\drv_qspi.c:363 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 164 163 167)
+(code_label 167 164 168 69 "" [0 uses])
+(insn 168 167 169 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 169 168 170 68 "" [0 uses])
+(insn 170 169 171 (unspec_volatile [
+            (symbol_ref:SI ("__FUNCTION__.13406") [flags 0x2]  <var_decl 064e02c0 __FUNCTION__>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 171 170 172 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0652b8f0 *.LC15>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 172 171 173 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0652b948 *.LC16>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 173 172 174 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC17") [flags 0x2]  <var_decl 0652b9a0 *.LC17>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 174 173 175 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0652b0b0 *.LC2>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 175 174 176 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC18") [flags 0x2]  <var_decl 0652b9f8 *.LC18>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 176 175 177 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0652b160 *.LC4>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 177 176 178 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 178 177 152)
+(note 152 178 0 NOTE_INSN_DELETED)
+
+;; Function rt_hw_qspi_bus_init (rt_hw_qspi_bus_init, funcdef_no=345, decl_uid=13409, cgraph_uid=347, symbol_order=350)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 19 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 19 3 20 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:390 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 20 19 21 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) libraries\HAL_Drivers\drv_qspi.c:390 4 {*arm_addsi3}
+     (nil))
+(note 21 20 2 2 NOTE_INSN_PROLOGUE_END)
+(note 2 21 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 27) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:391 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 27)
+                    (const_int 4 [0x4]))) [0  S4 A32])) libraries\HAL_Drivers\drv_qspi.c:391 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 7 6 8 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("stm32_qspi_register_bus") [flags 0x3]  <function_decl 064dd100 stm32_qspi_register_bus>) [0 stm32_qspi_register_bus S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) libraries\HAL_Drivers\drv_qspi.c:391 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 8 7 15 2 (set (reg:SI 3 r3 [orig:110 D.13641 ] [110])
+        (reg:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:391 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 15 8 16 2 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:111 <retval> ] [111])) libraries\HAL_Drivers\drv_qspi.c:392 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 16 15 22 2 (use (reg/i:SI 0 r0)) libraries\HAL_Drivers\drv_qspi.c:392 -1
+     (nil))
+(note 22 16 23 2 NOTE_INSN_EPILOGUE_BEG)
+(jump_insn 23 22 24 2 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) libraries\HAL_Drivers\drv_qspi.c:392 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 24 23 25)
+(code_label 25 24 26 73 "" [0 uses])
+(insn 26 25 27 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 27 26 28 72 "" [0 uses])
+(insn 28 27 29 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC19") [flags 0x2]  <var_decl 0652baa8 *.LC19>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 29 28 30 (unspec_volatile [
+            (symbol_ref:SI ("_stm32_qspi_bus")  <var_decl 063f0948 _stm32_qspi_bus>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 30 29 31 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 31 30 18)
+(note 18 31 0 NOTE_INSN_DELETED)

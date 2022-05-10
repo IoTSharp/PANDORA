@@ -1,0 +1,1482 @@
+
+;; Function ef_port_init (ef_port_init, funcdef_no=340, decl_uid=14381, cgraph_uid=342, symbol_order=346)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 49 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 49 5 50 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:40 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 50 49 51 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -16 [0xfffffffffffffff0]))) board\ports\easyflash\ef_fal_port.c:40 4 {*arm_addsi3}
+     (nil))
+(insn 51 50 52 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) board\ports\easyflash\ef_fal_port.c:40 293 {stack_tie}
+     (nil))
+(insn/f 52 51 53 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\easyflash\ef_fal_port.c:40 4 {*arm_addsi3}
+     (nil))
+(note 53 52 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 53 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 default_env+0 S4 A32])
+        (reg:SI 0 r0 [ default_env ])) board\ports\easyflash\ef_fal_port.c:40 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (reg/f:SI 7 r7) [0 default_env_size+0 S4 A32])
+        (reg:SI 1 r1 [ default_env_size ])) board\ports\easyflash\ef_fal_port.c:40 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 9 2 (parallel [
+            (set (reg:SI 3 r3 [114])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:41 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 9 7 10 2 (set (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                (const_int 15 [0xf])) [0 result+0 S1 A8])
+        (reg:QI 3 r3 [115])) board\ports\easyflash\ef_fal_port.c:41 182 {*arm_movqi_insn}
+     (nil))
+(insn 10 9 11 2 (set (reg/f:SI 3 r3 [116])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 default_env+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:43 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 2 r2 [117])
+        (mem:SI (label_ref 63) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:43 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 2 (set (mem/f:SI (reg/f:SI 3 r3 [116]) [0 *default_env_3(D)+0 S4 A32])
+        (reg/f:SI 2 r2 [117])) board\ports\easyflash\ef_fal_port.c:43 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 2 (set (reg/f:SI 3 r3 [118])
+        (mem/f/c:SI (reg/f:SI 7 r7) [0 default_env_size+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:44 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 14 13 15 2 (parallel [
+            (set (reg:SI 2 r2 [119])
+                (const_int 1 [0x1]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:44 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 15 14 16 2 (set (mem:SI (reg/f:SI 3 r3 [118]) [0 *default_env_size_5(D)+0 S4 A32])
+        (reg:SI 2 r2 [119])) board\ports\easyflash\ef_fal_port.c:44 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 16 15 17 2 (parallel [
+            (set (reg:SI 3 r3)
+                (const_int 1 [0x1]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:46 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 17 16 18 2 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 1 [0x1]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:46 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 1 r1)
+        (mem:SI (const:SI (plus:SI (label_ref 63)
+                    (const_int 4 [0x4]))) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:46 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 63)
+                    (const_int 8 [0x8]))) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:46 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 20 19 21 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_sem_init") [flags 0x41]  <function_decl 05a55580 rt_sem_init>) [0 rt_sem_init S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:46 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:QI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 21 20 22 2 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 63)
+                    (const_int 12 [0xc]))) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:48 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 22 21 23 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("fal_partition_find") [flags 0x41]  <function_decl 064e7900 fal_partition_find>) [0 fal_partition_find S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:48 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 23 22 24 2 (set (reg/f:SI 2 r2 [orig:110 D.14460 ] [110])
+        (reg:SI 0 r0)) board\ports\easyflash\ef_fal_port.c:48 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 24 23 25 2 (set (reg/f:SI 3 r3 [120])
+        (mem:SI (const:SI (plus:SI (label_ref 63)
+                    (const_int 16 [0x10]))) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:48 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 25 24 26 2 (set (mem/f/c:SI (reg/f:SI 3 r3 [120]) [0 part+0 S4 A32])
+        (reg/f:SI 2 r2 [orig:110 D.14460 ] [110])) board\ports\easyflash\ef_fal_port.c:48 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 26 25 27 2 (set (reg/f:SI 3 r3 [121])
+        (mem:SI (const:SI (plus:SI (label_ref 63)
+                    (const_int 16 [0x10]))) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:49 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 27 26 28 2 (set (reg/f:SI 3 r3 [orig:111 D.14460 ] [111])
+        (mem/f/c:SI (reg/f:SI 3 r3 [121]) [0 part+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:49 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 28 27 29 2 (set (reg:CC 100 cc)
+        (compare:CC (reg/f:SI 3 r3 [orig:111 D.14460 ] [111])
+            (const_int 0 [0]))) board\ports\easyflash\ef_fal_port.c:49 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 29 28 31 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 34)
+            (pc))) board\ports\easyflash\ef_fal_port.c:49 194 {arm_cond_branch}
+     (nil)
+ -> 34)
+(code_label 31 29 30 3 3 "" [1 uses])
+(note 30 31 46 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 46 30 47 3 (set (pc)
+        (label_ref 31)) board\ports\easyflash\ef_fal_port.c:49 203 {*arm_jump}
+     (nil)
+ -> 31)
+(barrier 47 46 34)
+(code_label 34 47 35 4 2 "" [1 uses])
+(note 35 34 36 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 36 35 43 4 (set (reg:SI 3 r3 [orig:112 D.14461 ] [112])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 15 [0xf])) [0 result+0 S1 A8]))) board\ports\easyflash\ef_fal_port.c:51 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 43 36 44 4 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:113 <retval> ] [113])) board\ports\easyflash\ef_fal_port.c:52 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 44 43 54 4 (use (reg/i:SI 0 r0)) board\ports\easyflash\ef_fal_port.c:52 -1
+     (nil))
+(note 54 44 55 4 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 55 54 56 4 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:52 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])))
+        (nil)))
+(insn 56 55 57 4 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) board\ports\easyflash\ef_fal_port.c:52 221 {blockage}
+     (nil))
+(insn/f 57 56 58 4 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) board\ports\easyflash\ef_fal_port.c:52 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 58 57 59 4 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) board\ports\easyflash\ef_fal_port.c:52 310 {force_register_use}
+     (nil))
+(jump_insn 59 58 60 4 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\easyflash\ef_fal_port.c:52 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 60 59 61)
+(code_label 61 60 62 6 "" [0 uses])
+(insn 62 61 63 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 63 62 64 5 "" [0 uses])
+(insn 64 63 65 (unspec_volatile [
+            (symbol_ref:SI ("default_env_set") [flags 0x2]  <var_decl 061d5bb0 default_env_set>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 65 64 66 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 064ff528 *.LC2>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 66 65 67 (unspec_volatile [
+            (symbol_ref:SI ("env_cache_lock") [flags 0x2]  <var_decl 061d5c60 env_cache_lock>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 67 66 68 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 064ff580 *.LC3>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 68 67 69 (unspec_volatile [
+            (symbol_ref:SI ("part") [flags 0x2]  <var_decl 061d5cb8 part>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 69 68 70 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 70 69 48)
+(note 48 70 0 NOTE_INSN_DELETED)
+
+;; Function ef_port_read (ef_port_read, funcdef_no=341, decl_uid=4308, cgraph_uid=343, symbol_order=347)
+
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 29 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 29 6 30 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:64 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 30 29 31 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -24 [0xffffffffffffffe8]))) board\ports\easyflash\ef_fal_port.c:64 4 {*arm_addsi3}
+     (nil))
+(insn 31 30 32 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) board\ports\easyflash\ef_fal_port.c:64 293 {stack_tie}
+     (nil))
+(insn/f 32 31 33 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\easyflash\ef_fal_port.c:64 4 {*arm_addsi3}
+     (nil))
+(note 33 32 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 33 3 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 addr+0 S4 A32])
+        (reg:SI 0 r0 [ addr ])) board\ports\easyflash\ef_fal_port.c:64 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [0 buf+0 S4 A32])
+        (reg:SI 1 r1 [ buf ])) board\ports\easyflash\ef_fal_port.c:64 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 4 3 5 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 size+0 S4 A32])
+        (reg:SI 2 r2 [ size ])) board\ports\easyflash\ef_fal_port.c:64 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 10 2 (parallel [
+            (set (reg:SI 3 r3 [113])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:65 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 10 8 11 2 (set (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                (const_int 23 [0x17])) [0 result+0 S1 A8])
+        (reg:QI 3 r3 [114])) board\ports\easyflash\ef_fal_port.c:65 182 {*arm_movqi_insn}
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 3 r3 [115])
+        (mem:SI (label_ref 43) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:67 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 2 (set (reg/f:SI 0 r0 [orig:110 D.14464 ] [110])
+        (mem/f/c:SI (reg/f:SI 3 r3 [115]) [0 part+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:67 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 3 r3)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 size+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:67 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 2 r2)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [0 buf+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:67 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 15 14 17 2 (set (reg:SI 1 r1)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 addr+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:67 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 17 15 18 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("fal_partition_read") [flags 0x41]  <function_decl 064e7a80 fal_partition_read>) [0 fal_partition_read S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:67 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 18 17 25 2 (set (reg:SI 3 r3 [orig:111 D.14465 ] [111])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 23 [0x17])) [0 result+0 S1 A8]))) board\ports\easyflash\ef_fal_port.c:69 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 25 18 26 2 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:112 <retval> ] [112])) board\ports\easyflash\ef_fal_port.c:70 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 26 25 34 2 (use (reg/i:SI 0 r0)) board\ports\easyflash\ef_fal_port.c:70 -1
+     (nil))
+(note 34 26 35 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 35 34 36 2 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 24 [0x18])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:70 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])))
+        (nil)))
+(insn 36 35 37 2 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) board\ports\easyflash\ef_fal_port.c:70 221 {blockage}
+     (nil))
+(insn/f 37 36 38 2 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) board\ports\easyflash\ef_fal_port.c:70 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 38 37 39 2 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) board\ports\easyflash\ef_fal_port.c:70 310 {force_register_use}
+     (nil))
+(jump_insn 39 38 40 2 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\easyflash\ef_fal_port.c:70 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 40 39 41)
+(code_label 41 40 42 10 "" [0 uses])
+(insn 42 41 43 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 43 42 44 9 "" [0 uses])
+(insn 44 43 45 (unspec_volatile [
+            (symbol_ref:SI ("part") [flags 0x2]  <var_decl 061d5cb8 part>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 45 44 46 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 46 45 28)
+(note 28 46 0 NOTE_INSN_DELETED)
+
+;; Function ef_port_erase (ef_port_erase, funcdef_no=342, decl_uid=4311, cgraph_uid=344, symbol_order=348)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 48 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 48 5 49 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:82 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 49 48 50 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -16 [0xfffffffffffffff0]))) board\ports\easyflash\ef_fal_port.c:82 4 {*arm_addsi3}
+     (nil))
+(insn 50 49 51 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) board\ports\easyflash\ef_fal_port.c:82 293 {stack_tie}
+     (nil))
+(insn/f 51 50 52 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\easyflash\ef_fal_port.c:82 4 {*arm_addsi3}
+     (nil))
+(note 52 51 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 52 3 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 addr+0 S4 A32])
+        (reg:SI 0 r0 [ addr ])) board\ports\easyflash\ef_fal_port.c:82 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (reg/f:SI 7 r7) [0 size+0 S4 A32])
+        (reg:SI 1 r1 [ size ])) board\ports\easyflash\ef_fal_port.c:82 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 9 2 (parallel [
+            (set (reg:SI 3 r3 [115])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:83 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 9 7 10 2 (set (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                (const_int 15 [0xf])) [0 result+0 S1 A8])
+        (reg:QI 3 r3 [116])) board\ports\easyflash\ef_fal_port.c:83 182 {*arm_movqi_insn}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 3 r3 [117])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 addr+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:86 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 3 r3 [orig:110 D.14466 ] [110])
+        (zero_extract:SI (reg:SI 3 r3 [117])
+            (const_int 12 [0xc])
+            (const_int 0 [0]))) board\ports\easyflash\ef_fal_port.c:86 136 {extzv_t2}
+     (nil))
+(insn 12 11 13 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:110 D.14466 ] [110])
+            (const_int 0 [0]))) board\ports\easyflash\ef_fal_port.c:86 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 13 12 15 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 18)
+            (pc))) board\ports\easyflash\ef_fal_port.c:86 194 {arm_cond_branch}
+     (nil)
+ -> 18)
+(code_label 15 13 14 3 13 "" [1 uses])
+(note 14 15 45 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 45 14 46 3 (set (pc)
+        (label_ref 15)) board\ports\easyflash\ef_fal_port.c:86 203 {*arm_jump}
+     (nil)
+ -> 15)
+(barrier 46 45 18)
+(code_label 18 46 19 4 12 "" [1 uses])
+(note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 4 (set (reg/f:SI 3 r3 [118])
+        (mem:SI (label_ref 62) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:88 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 21 20 22 4 (set (reg/f:SI 3 r3 [orig:111 D.14467 ] [111])
+        (mem/f/c:SI (reg/f:SI 3 r3 [118]) [0 part+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:88 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 21 23 4 (set (reg:SI 2 r2)
+        (mem/c:SI (reg/f:SI 7 r7) [0 size+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:88 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 23 22 24 4 (set (reg:SI 1 r1)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 addr+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:88 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 24 23 25 4 (set (reg:SI 0 r0)
+        (reg/f:SI 3 r3 [orig:111 D.14467 ] [111])) board\ports\easyflash\ef_fal_port.c:88 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 25 24 26 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("fal_partition_erase") [flags 0x41]  <function_decl 064e7b80 fal_partition_erase>) [0 fal_partition_erase S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:88 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 26 25 27 4 (set (reg:SI 3 r3 [orig:112 D.14468 ] [112])
+        (reg:SI 0 r0)) board\ports\easyflash\ef_fal_port.c:88 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 27 26 28 4 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:112 D.14468 ] [112])
+            (const_int 0 [0]))) board\ports\easyflash\ef_fal_port.c:88 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 28 27 29 4 (set (pc)
+        (if_then_else (ge (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 33)
+            (pc))) board\ports\easyflash\ef_fal_port.c:88 194 {arm_cond_branch}
+     (nil)
+ -> 33)
+(note 29 28 30 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 32 5 (parallel [
+            (set (reg:SI 3 r3 [119])
+                (const_int 1 [0x1]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:90 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 32 30 33 5 (set (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                (const_int 15 [0xf])) [0 result+0 S1 A8])
+        (reg:QI 3 r3 [120])) board\ports\easyflash\ef_fal_port.c:90 182 {*arm_movqi_insn}
+     (nil))
+(code_label 33 32 34 6 14 "" [1 uses])
+(note 34 33 35 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 42 6 (set (reg:SI 3 r3 [orig:113 D.14469 ] [113])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 15 [0xf])) [0 result+0 S1 A8]))) board\ports\easyflash\ef_fal_port.c:93 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 42 35 43 6 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:114 <retval> ] [114])) board\ports\easyflash\ef_fal_port.c:94 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 43 42 53 6 (use (reg/i:SI 0 r0)) board\ports\easyflash\ef_fal_port.c:94 -1
+     (nil))
+(note 53 43 54 6 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 54 53 55 6 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:94 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])))
+        (nil)))
+(insn 55 54 56 6 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) board\ports\easyflash\ef_fal_port.c:94 221 {blockage}
+     (nil))
+(insn/f 56 55 57 6 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) board\ports\easyflash\ef_fal_port.c:94 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 57 56 58 6 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) board\ports\easyflash\ef_fal_port.c:94 310 {force_register_use}
+     (nil))
+(jump_insn 58 57 59 6 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\easyflash\ef_fal_port.c:94 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 59 58 60)
+(code_label 60 59 61 17 "" [0 uses])
+(insn 61 60 62 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 62 61 63 16 "" [0 uses])
+(insn 63 62 64 (unspec_volatile [
+            (symbol_ref:SI ("part") [flags 0x2]  <var_decl 061d5cb8 part>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 64 63 65 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 65 64 47)
+(note 47 65 0 NOTE_INSN_DELETED)
+
+;; Function ef_port_write (ef_port_write, funcdef_no=343, decl_uid=4315, cgraph_uid=345, symbol_order=349)
+
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 38 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 38 6 39 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:106 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 39 38 40 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -24 [0xffffffffffffffe8]))) board\ports\easyflash\ef_fal_port.c:106 4 {*arm_addsi3}
+     (nil))
+(insn 40 39 41 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) board\ports\easyflash\ef_fal_port.c:106 293 {stack_tie}
+     (nil))
+(insn/f 41 40 42 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\easyflash\ef_fal_port.c:106 4 {*arm_addsi3}
+     (nil))
+(note 42 41 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 42 3 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 addr+0 S4 A32])
+        (reg:SI 0 r0 [ addr ])) board\ports\easyflash\ef_fal_port.c:106 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [0 buf+0 S4 A32])
+        (reg:SI 1 r1 [ buf ])) board\ports\easyflash\ef_fal_port.c:106 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 4 3 5 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 size+0 S4 A32])
+        (reg:SI 2 r2 [ size ])) board\ports\easyflash\ef_fal_port.c:106 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 10 2 (parallel [
+            (set (reg:SI 3 r3 [114])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:107 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 10 8 11 2 (set (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                (const_int 23 [0x17])) [0 result+0 S1 A8])
+        (reg:QI 3 r3 [115])) board\ports\easyflash\ef_fal_port.c:107 182 {*arm_movqi_insn}
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 3 r3 [116])
+        (mem:SI (label_ref 52) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:109 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 2 (set (reg/f:SI 0 r0 [orig:110 D.14470 ] [110])
+        (mem/f/c:SI (reg/f:SI 3 r3 [116]) [0 part+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:109 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 3 r3)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 size+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:109 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 2 r2)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [0 buf+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:109 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 15 14 17 2 (set (reg:SI 1 r1)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 addr+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:109 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 17 15 18 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("fal_partition_write") [flags 0x41]  <function_decl 064e7b00 fal_partition_write>) [0 fal_partition_write S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:109 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 18 17 19 2 (set (reg:SI 3 r3 [orig:111 D.14471 ] [111])
+        (reg:SI 0 r0)) board\ports\easyflash\ef_fal_port.c:109 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 19 18 20 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:111 D.14471 ] [111])
+            (const_int 0 [0]))) board\ports\easyflash\ef_fal_port.c:109 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 20 19 21 2 (set (pc)
+        (if_then_else (ge (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 25)
+            (pc))) board\ports\easyflash\ef_fal_port.c:109 194 {arm_cond_branch}
+     (nil)
+ -> 25)
+(note 21 20 22 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 24 3 (parallel [
+            (set (reg:SI 3 r3 [117])
+                (const_int 3 [0x3]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:111 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 24 22 25 3 (set (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                (const_int 23 [0x17])) [0 result+0 S1 A8])
+        (reg:QI 3 r3 [118])) board\ports\easyflash\ef_fal_port.c:111 182 {*arm_movqi_insn}
+     (nil))
+(code_label 25 24 26 4 19 "" [1 uses])
+(note 26 25 27 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 34 4 (set (reg:SI 3 r3 [orig:112 D.14472 ] [112])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 7 r7)
+                    (const_int 23 [0x17])) [0 result+0 S1 A8]))) board\ports\easyflash\ef_fal_port.c:114 821 {thumb2_zero_extendqisi2_v6}
+     (nil))
+(insn 34 27 35 4 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:113 <retval> ] [113])) board\ports\easyflash\ef_fal_port.c:115 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 35 34 43 4 (use (reg/i:SI 0 r0)) board\ports\easyflash\ef_fal_port.c:115 -1
+     (nil))
+(note 43 35 44 4 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 44 43 45 4 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 24 [0x18])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:115 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])))
+        (nil)))
+(insn 45 44 46 4 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) board\ports\easyflash\ef_fal_port.c:115 221 {blockage}
+     (nil))
+(insn/f 46 45 47 4 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) board\ports\easyflash\ef_fal_port.c:115 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 47 46 48 4 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) board\ports\easyflash\ef_fal_port.c:115 310 {force_register_use}
+     (nil))
+(jump_insn 48 47 49 4 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\easyflash\ef_fal_port.c:115 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 49 48 50)
+(code_label 50 49 51 22 "" [0 uses])
+(insn 51 50 52 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 52 51 53 21 "" [0 uses])
+(insn 53 52 54 (unspec_volatile [
+            (symbol_ref:SI ("part") [flags 0x2]  <var_decl 061d5cb8 part>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 54 53 55 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 55 54 37)
+(note 37 55 0 NOTE_INSN_DELETED)
+
+;; Function ef_port_env_lock (ef_port_env_lock, funcdef_no=344, decl_uid=4317, cgraph_uid=346, symbol_order=350)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 12 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 12 3 13 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:120 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 13 12 14 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\easyflash\ef_fal_port.c:120 4 {*arm_addsi3}
+     (nil))
+(note 14 13 2 2 NOTE_INSN_PROLOGUE_END)
+(note 2 14 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 1 r1)
+        (const_int -1 [0xffffffffffffffff])) board\ports\easyflash\ef_fal_port.c:121 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 0 r0)
+        (mem:SI (label_ref 20) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:121 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 7 6 10 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_sem_take") [flags 0x41]  <function_decl 05a55780 rt_sem_take>) [0 rt_sem_take S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:121 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 10 7 15 2 (const_int 0 [0]) board\ports\easyflash\ef_fal_port.c:122 225 {nop}
+     (nil))
+(note 15 10 16 2 NOTE_INSN_EPILOGUE_BEG)
+(jump_insn 16 15 17 2 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\easyflash\ef_fal_port.c:122 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 17 16 18)
+(code_label 18 17 19 25 "" [0 uses])
+(insn 19 18 20 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 20 19 21 24 "" [0 uses])
+(insn 21 20 22 (unspec_volatile [
+            (symbol_ref:SI ("env_cache_lock") [flags 0x2]  <var_decl 061d5c60 env_cache_lock>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 22 21 23 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 23 22 11)
+(note 11 23 0 NOTE_INSN_DELETED)
+
+;; Function ef_port_env_unlock (ef_port_env_unlock, funcdef_no=345, decl_uid=4319, cgraph_uid=347, symbol_order=351)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 11 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 11 3 12 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:127 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 12 11 13 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\easyflash\ef_fal_port.c:127 4 {*arm_addsi3}
+     (nil))
+(note 13 12 2 2 NOTE_INSN_PROLOGUE_END)
+(note 2 13 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 0 r0)
+        (mem:SI (label_ref 19) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:128 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 6 5 9 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_sem_release") [flags 0x41]  <function_decl 05a55880 rt_sem_release>) [0 rt_sem_release S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:128 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 9 6 14 2 (const_int 0 [0]) board\ports\easyflash\ef_fal_port.c:129 225 {nop}
+     (nil))
+(note 14 9 15 2 NOTE_INSN_EPILOGUE_BEG)
+(jump_insn 15 14 16 2 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\easyflash\ef_fal_port.c:129 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 16 15 17)
+(code_label 17 16 18 28 "" [0 uses])
+(insn 18 17 19 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 19 18 20 27 "" [0 uses])
+(insn 20 19 21 (unspec_volatile [
+            (symbol_ref:SI ("env_cache_lock") [flags 0x2]  <var_decl 061d5c60 env_cache_lock>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 21 20 22 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 22 21 10)
+(note 10 22 0 NOTE_INSN_DELETED)
+
+;; Function ef_log_debug (ef_log_debug, funcdef_no=346, decl_uid=4323, cgraph_uid=348, symbol_order=352)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 11 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 11 5 12 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg:SI 2 r2)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 3 r3))
+        ]) board\ports\easyflash\ef_fal_port.c:140 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg:SI 2 r2))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 3 r3))
+            ])
+        (nil)))
+(insn/f 12 11 13 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -4 [0xfffffffffffffffc]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+        ]) board\ports\easyflash\ef_fal_port.c:140 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -4 [0xfffffffffffffffc])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+            ])
+        (nil)))
+(insn/f 13 12 14 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -12 [0xfffffffffffffff4]))) board\ports\easyflash\ef_fal_port.c:140 4 {*arm_addsi3}
+     (nil))
+(insn 14 13 15 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) board\ports\easyflash\ef_fal_port.c:140 293 {stack_tie}
+     (nil))
+(insn/f 15 14 16 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\easyflash\ef_fal_port.c:140 4 {*arm_addsi3}
+     (nil))
+(note 16 15 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 16 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 file+0 S4 A32])
+        (reg:SI 0 r0 [ file ])) board\ports\easyflash\ef_fal_port.c:140 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (reg/f:SI 7 r7) [0 line+0 S4 A32])
+        (reg:SI 1 r1 [ line ])) board\ports\easyflash\ef_fal_port.c:140 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 4 3 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 4 17 2 (const_int 0 [0]) board\ports\easyflash\ef_fal_port.c:156 225 {nop}
+     (nil))
+(note 17 9 18 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 18 17 19 2 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:156 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])))
+        (nil)))
+(insn 19 18 20 2 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) board\ports\easyflash\ef_fal_port.c:156 221 {blockage}
+     (nil))
+(insn/f 20 19 21 2 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) board\ports\easyflash\ef_fal_port.c:156 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 21 20 22 2 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) board\ports\easyflash\ef_fal_port.c:156 310 {force_register_use}
+     (nil))
+(insn/f 22 21 23 2 (set (reg/f:SI 7 r7)
+        (mem:SI (post_inc:SI (reg/f:SI 13 sp)) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:156 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+            (nil))))
+(insn/f 23 22 24 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 8 [0x8]))) board\ports\easyflash\ef_fal_port.c:156 4 {*arm_addsi3}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 8 [0x8])))
+        (expr_list:REG_CFA_RESTORE (reg:SI 3 r3)
+            (expr_list:REG_CFA_RESTORE (reg:SI 2 r2)
+                (nil)))))
+(jump_insn 24 23 25 2 (simple_return) board\ports\easyflash\ef_fal_port.c:156 824 {*thumb2_return}
+     (nil)
+ -> simple_return)
+(barrier 25 24 10)
+(note 10 25 0 NOTE_INSN_DELETED)
+
+;; Function ef_log_info (ef_log_info, funcdef_no=347, decl_uid=4325, cgraph_uid=349, symbol_order=353)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 20 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 20 3 21 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -16 [0xfffffffffffffff0]))) [0  A8])
+                (unspec:BLK [
+                        (reg:SI 0 r0)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 1 r1))
+            (use (reg:SI 2 r2))
+            (use (reg:SI 3 r3))
+        ]) board\ports\easyflash\ef_fal_port.c:164 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -16 [0xfffffffffffffff0])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg:SI 0 r0))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 1 r1))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 8 [0x8])) [0  S4 A32])
+                    (reg:SI 2 r2))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 12 [0xc])) [0  S4 A32])
+                    (reg:SI 3 r3))
+            ])
+        (nil)))
+(insn/f 21 20 22 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:164 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 22 21 23 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -8 [0xfffffffffffffff8]))) board\ports\easyflash\ef_fal_port.c:164 4 {*arm_addsi3}
+     (nil))
+(insn 23 22 24 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) board\ports\easyflash\ef_fal_port.c:164 293 {stack_tie}
+     (nil))
+(insn/f 24 23 25 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\easyflash\ef_fal_port.c:164 4 {*arm_addsi3}
+     (nil))
+(note 25 24 2 2 NOTE_INSN_PROLOGUE_END)
+(note 2 25 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 3 r3 [110])
+        (plus:SI (reg/f:SI 7 r7)
+            (const_int 20 [0x14]))) board\ports\easyflash\ef_fal_port.c:168 4 {*arm_addsi3}
+     (nil))
+(insn 6 5 7 2 (set (mem/f/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 MEM[(struct  *)&args].__ap+0 S4 A32])
+        (reg:SI 3 r3 [110])) board\ports\easyflash\ef_fal_port.c:168 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 0 r0)
+        (mem:SI (label_ref 37) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:169 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 8 7 9 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("ef_print") [flags 0x3]  <function_decl 0583ce80 ef_print>) [0 ef_print S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:169 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 9 8 10 2 (set (reg:SI 2 r2)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 args+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:171 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 1 r1)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])) [0 format+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:171 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 37)
+                    (const_int 4 [0x4]))) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:171 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 12 11 13 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_vsprintf") [flags 0x41]  <function_decl 05a59f00 rt_vsprintf>) [0 rt_vsprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:171 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 13 12 14 2 (set (reg:SI 1 r1)
+        (mem:SI (const:SI (plus:SI (label_ref 37)
+                    (const_int 4 [0x4]))) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:172 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 14 13 15 2 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 37)
+                    (const_int 8 [0x8]))) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:172 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 15 14 18 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("ef_print") [flags 0x3]  <function_decl 0583ce80 ef_print>) [0 ef_print S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:172 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 18 15 26 2 (const_int 0 [0]) board\ports\easyflash\ef_fal_port.c:174 225 {nop}
+     (nil))
+(note 26 18 27 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 27 26 28 2 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:174 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])))
+        (nil)))
+(insn 28 27 29 2 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) board\ports\easyflash\ef_fal_port.c:174 221 {blockage}
+     (nil))
+(insn/f 29 28 30 2 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) board\ports\easyflash\ef_fal_port.c:174 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 30 29 31 2 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) board\ports\easyflash\ef_fal_port.c:174 310 {force_register_use}
+     (nil))
+(insn/f 31 30 32 2 (parallel [
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 14 lr)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\easyflash\ef_fal_port.c:174 294 {*load_multiple_with_writeback}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 8 [0x8])))
+        (expr_list:REG_CFA_RESTORE (reg:SI 14 lr)
+            (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+                (nil)))))
+(insn/f 32 31 33 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 16 [0x10]))) board\ports\easyflash\ef_fal_port.c:174 4 {*arm_addsi3}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 16 [0x10])))
+        (expr_list:REG_CFA_RESTORE (reg:SI 3 r3)
+            (expr_list:REG_CFA_RESTORE (reg:SI 2 r2)
+                (expr_list:REG_CFA_RESTORE (reg:SI 1 r1)
+                    (expr_list:REG_CFA_RESTORE (reg:SI 0 r0)
+                        (nil)))))))
+(jump_insn 33 32 34 2 (simple_return) board\ports\easyflash\ef_fal_port.c:174 824 {*thumb2_return}
+     (nil)
+ -> simple_return)
+(barrier 34 33 35)
+(code_label 35 34 36 32 "" [0 uses])
+(insn 36 35 37 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 37 36 38 31 "" [0 uses])
+(insn 38 37 39 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 064ff948 *.LC4>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 39 38 40 (unspec_volatile [
+            (symbol_ref:SI ("log_buf") [flags 0x2]  <var_decl 061d5c08 log_buf>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 40 39 41 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 064ff9a0 *.LC5>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 41 40 42 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 42 41 19)
+(note 19 42 0 NOTE_INSN_DELETED)
+
+;; Function ef_print (ef_print, funcdef_no=348, decl_uid=4327, cgraph_uid=350, symbol_order=354)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 18 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 18 3 19 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -16 [0xfffffffffffffff0]))) [0  A8])
+                (unspec:BLK [
+                        (reg:SI 0 r0)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 1 r1))
+            (use (reg:SI 2 r2))
+            (use (reg:SI 3 r3))
+        ]) board\ports\easyflash\ef_fal_port.c:181 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -16 [0xfffffffffffffff0])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg:SI 0 r0))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 1 r1))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 8 [0x8])) [0  S4 A32])
+                    (reg:SI 2 r2))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 12 [0xc])) [0  S4 A32])
+                    (reg:SI 3 r3))
+            ])
+        (nil)))
+(insn/f 19 18 20 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:181 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 20 19 21 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -8 [0xfffffffffffffff8]))) board\ports\easyflash\ef_fal_port.c:181 4 {*arm_addsi3}
+     (nil))
+(insn 21 20 22 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) board\ports\easyflash\ef_fal_port.c:181 293 {stack_tie}
+     (nil))
+(insn/f 22 21 23 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\easyflash\ef_fal_port.c:181 4 {*arm_addsi3}
+     (nil))
+(note 23 22 2 2 NOTE_INSN_PROLOGUE_END)
+(note 2 23 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 3 r3 [110])
+        (plus:SI (reg/f:SI 7 r7)
+            (const_int 20 [0x14]))) board\ports\easyflash\ef_fal_port.c:185 4 {*arm_addsi3}
+     (nil))
+(insn 6 5 7 2 (set (mem/f/j/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 MEM[(struct  *)&args].__ap+0 S4 A32])
+        (reg:SI 3 r3 [110])) board\ports\easyflash\ef_fal_port.c:185 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 2 r2)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 args+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:187 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 1 r1)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])) [0 format+0 S4 A32])) board\ports\easyflash\ef_fal_port.c:187 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 0 r0)
+        (mem:SI (label_ref 35) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:187 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 10 9 11 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_vsprintf") [flags 0x41]  <function_decl 05a59f00 rt_vsprintf>) [0 rt_vsprintf S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:187 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 11 10 12 2 (set (reg:SI 1 r1)
+        (mem:SI (label_ref 35) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:188 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 35)
+                    (const_int 4 [0x4]))) [0  S4 A32])) board\ports\easyflash\ef_fal_port.c:188 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 13 12 16 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_kprintf") [flags 0x41]  <function_decl 05a59e00 rt_kprintf>) [0 rt_kprintf S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\easyflash\ef_fal_port.c:188 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (nil)))))
+(insn 16 13 24 2 (const_int 0 [0]) board\ports\easyflash\ef_fal_port.c:190 225 {nop}
+     (nil))
+(note 24 16 25 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 25 24 26 2 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\easyflash\ef_fal_port.c:190 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])))
+        (nil)))
+(insn 26 25 27 2 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) board\ports\easyflash\ef_fal_port.c:190 221 {blockage}
+     (nil))
+(insn/f 27 26 28 2 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) board\ports\easyflash\ef_fal_port.c:190 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 28 27 29 2 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) board\ports\easyflash\ef_fal_port.c:190 310 {force_register_use}
+     (nil))
+(insn/f 29 28 30 2 (parallel [
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 14 lr)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\easyflash\ef_fal_port.c:190 294 {*load_multiple_with_writeback}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 8 [0x8])))
+        (expr_list:REG_CFA_RESTORE (reg:SI 14 lr)
+            (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+                (nil)))))
+(insn/f 30 29 31 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 16 [0x10]))) board\ports\easyflash\ef_fal_port.c:190 4 {*arm_addsi3}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 16 [0x10])))
+        (expr_list:REG_CFA_RESTORE (reg:SI 3 r3)
+            (expr_list:REG_CFA_RESTORE (reg:SI 2 r2)
+                (expr_list:REG_CFA_RESTORE (reg:SI 1 r1)
+                    (expr_list:REG_CFA_RESTORE (reg:SI 0 r0)
+                        (nil)))))))
+(jump_insn 31 30 32 2 (simple_return) board\ports\easyflash\ef_fal_port.c:190 824 {*thumb2_return}
+     (nil)
+ -> simple_return)
+(barrier 32 31 33)
+(code_label 33 32 34 35 "" [0 uses])
+(insn 34 33 35 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 35 34 36 34 "" [0 uses])
+(insn 36 35 37 (unspec_volatile [
+            (symbol_ref:SI ("log_buf") [flags 0x2]  <var_decl 061d5c08 log_buf>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 37 36 38 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 064ff9a0 *.LC5>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 38 37 39 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 39 38 17)
+(note 17 39 0 NOTE_INSN_DELETED)

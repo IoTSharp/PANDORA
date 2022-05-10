@@ -1,0 +1,616 @@
+
+;; Function read_cfg (read_cfg, funcdef_no=340, decl_uid=14229, cgraph_uid=342, symbol_order=342)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 38 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 38 5 39 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\wifi\wifi_config.c:195 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 39 38 40 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -16 [0xfffffffffffffff0]))) board\ports\wifi\wifi_config.c:195 4 {*arm_addsi3}
+     (nil))
+(insn 40 39 41 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) board\ports\wifi\wifi_config.c:195 293 {stack_tie}
+     (nil))
+(insn/f 41 40 42 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\wifi\wifi_config.c:195 4 {*arm_addsi3}
+     (nil))
+(note 42 41 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 42 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 buff+0 S4 A32])
+        (reg:SI 0 r0 [ buff ])) board\ports\wifi\wifi_config.c:195 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (reg/f:SI 7 r7) [0 len+0 S4 A32])
+        (reg:SI 1 r1 [ len ])) board\ports\wifi\wifi_config.c:195 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:SI 2 r2 [orig:111 D.14270 ] [111])
+        (mem/c:SI (reg/f:SI 7 r7) [0 len+0 S4 A32])) board\ports\wifi\wifi_config.c:198 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 11 2 (set (reg:SI 3 r3 [114])
+        (plus:SI (reg/f:SI 7 r7)
+            (const_int 12 [0xc]))) board\ports\wifi\wifi_config.c:198 4 {*arm_addsi3}
+     (nil))
+(insn 11 8 12 2 (set (reg:SI 1 r1)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 buff+0 S4 A32])) board\ports\wifi\wifi_config.c:198 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 0 r0)
+        (mem:SI (label_ref 52) [0  S4 A32])) board\ports\wifi\wifi_config.c:198 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 13 12 14 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("ef_get_env_blob") [flags 0x41]  <function_decl 05a3b380 ef_get_env_blob>) [0 ef_get_env_blob S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\wifi\wifi_config.c:198 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 14 13 15 2 (set (reg:SI 3 r3 [orig:112 D.14270 ] [112])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 saved_len+0 S4 A32])) board\ports\wifi\wifi_config.c:199 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 15 14 16 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:112 D.14270 ] [112])
+            (const_int 0 [0]))) board\ports\wifi\wifi_config.c:199 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 16 15 17 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 21)
+            (pc))) board\ports\wifi\wifi_config.c:199 194 {arm_cond_branch}
+     (nil)
+ -> 21)
+(note 17 16 18 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 35 3 (parallel [
+            (set (reg:SI 3 r3 [orig:110 D.14269 ] [110])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\wifi\wifi_config.c:201 830 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 35 18 36 3 (set (pc)
+        (label_ref 26)) board\ports\wifi\wifi_config.c:201 203 {*arm_jump}
+     (nil)
+ -> 26)
+(barrier 36 35 21)
+(code_label 21 36 22 4 2 "" [1 uses])
+(note 22 21 23 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 26 4 (set (reg:SI 3 r3 [orig:110 D.14269 ] [110])
+        (mem/c:SI (reg/f:SI 7 r7) [0 len+0 S4 A32])) board\ports\wifi\wifi_config.c:204 615 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 26 23 27 5 4 "" [1 uses])
+(note 27 26 32 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 32 27 33 5 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:113 <retval> ] [113])) board\ports\wifi\wifi_config.c:205 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 33 32 43 5 (use (reg/i:SI 0 r0)) board\ports\wifi\wifi_config.c:205 -1
+     (nil))
+(note 43 33 44 5 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 44 43 45 5 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\wifi\wifi_config.c:205 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])))
+        (nil)))
+(insn 45 44 46 5 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) board\ports\wifi\wifi_config.c:205 221 {blockage}
+     (nil))
+(insn/f 46 45 47 5 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) board\ports\wifi\wifi_config.c:205 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 47 46 48 5 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) board\ports\wifi\wifi_config.c:205 310 {force_register_use}
+     (nil))
+(jump_insn 48 47 49 5 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\wifi\wifi_config.c:205 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 49 48 50)
+(code_label 50 49 51 6 "" [0 uses])
+(insn 51 50 52 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 52 51 53 5 "" [0 uses])
+(insn 53 52 54 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0651f948 *.LC0>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 54 53 55 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 55 54 37)
+(note 37 55 0 NOTE_INSN_DELETED)
+
+;; Function get_len (get_len, funcdef_no=341, decl_uid=14233, cgraph_uid=343, symbol_order=343)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 36 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 36 3 37 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\wifi\wifi_config.c:208 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 37 36 38 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -8 [0xfffffffffffffff8]))) board\ports\wifi\wifi_config.c:208 4 {*arm_addsi3}
+     (nil))
+(insn 38 37 39 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) board\ports\wifi\wifi_config.c:208 293 {stack_tie}
+     (nil))
+(insn/f 39 38 40 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\wifi\wifi_config.c:208 4 {*arm_addsi3}
+     (nil))
+(note 40 39 2 2 NOTE_INSN_PROLOGUE_END)
+(note 2 40 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 3 r3 [113])
+        (reg/f:SI 7 r7)) board\ports\wifi\wifi_config.c:212 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 6 5 8 2 (parallel [
+            (set (reg:SI 1 r1 [114])
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\wifi\wifi_config.c:212 831 {*thumb2_addsi_short}
+     (nil))
+(insn 8 6 10 2 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 4 [0x4]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\wifi\wifi_config.c:212 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 10 8 11 2 (set (reg:SI 0 r0)
+        (mem:SI (label_ref 50) [0  S4 A32])) board\ports\wifi\wifi_config.c:212 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 11 10 12 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("ef_get_env_blob") [flags 0x41]  <function_decl 05a3b380 ef_get_env_blob>) [0 ef_get_env_blob S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\wifi\wifi_config.c:212 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 12 11 13 2 (set (reg:SI 3 r3 [orig:111 D.14273 ] [111])
+        (mem/c:SI (reg/f:SI 7 r7) [0 saved_len+0 S4 A64])) board\ports\wifi\wifi_config.c:213 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:111 D.14273 ] [111])
+            (const_int 0 [0]))) board\ports\wifi\wifi_config.c:213 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 14 13 15 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 19)
+            (pc))) board\ports\wifi\wifi_config.c:213 194 {arm_cond_branch}
+     (nil)
+ -> 19)
+(note 15 14 16 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 33 3 (parallel [
+            (set (reg:SI 3 r3 [orig:110 D.14272 ] [110])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\wifi\wifi_config.c:215 830 {*thumb2_movsi_shortim}
+     (nil))
+(jump_insn 33 16 34 3 (set (pc)
+        (label_ref 24)) board\ports\wifi\wifi_config.c:215 203 {*arm_jump}
+     (nil)
+ -> 24)
+(barrier 34 33 19)
+(code_label 19 34 20 4 8 "" [1 uses])
+(note 20 19 21 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 24 4 (set (reg:SI 3 r3 [orig:110 D.14272 ] [110])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 len+0 S4 A32])) board\ports\wifi\wifi_config.c:218 615 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 24 21 25 5 10 "" [1 uses])
+(note 25 24 30 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 30 25 31 5 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:112 <retval> ] [112])) board\ports\wifi\wifi_config.c:219 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 31 30 41 5 (use (reg/i:SI 0 r0)) board\ports\wifi\wifi_config.c:219 -1
+     (nil))
+(note 41 31 42 5 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 42 41 43 5 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\wifi\wifi_config.c:219 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])))
+        (nil)))
+(insn 43 42 44 5 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) board\ports\wifi\wifi_config.c:219 221 {blockage}
+     (nil))
+(insn/f 44 43 45 5 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) board\ports\wifi\wifi_config.c:219 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 45 44 46 5 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) board\ports\wifi\wifi_config.c:219 310 {force_register_use}
+     (nil))
+(jump_insn 46 45 47 5 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\wifi\wifi_config.c:219 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 47 46 48)
+(code_label 48 47 49 12 "" [0 uses])
+(insn 49 48 50 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 50 49 51 11 "" [0 uses])
+(insn 51 50 52 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0651fa50 *.LC1>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 52 51 53 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 53 52 35)
+(note 35 53 0 NOTE_INSN_DELETED)
+
+;; Function write_cfg (write_cfg, funcdef_no=342, decl_uid=14239, cgraph_uid=344, symbol_order=344)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 29 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 29 5 30 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\wifi\wifi_config.c:222 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 30 29 31 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -8 [0xfffffffffffffff8]))) board\ports\wifi\wifi_config.c:222 4 {*arm_addsi3}
+     (nil))
+(insn 31 30 32 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) board\ports\wifi\wifi_config.c:222 293 {stack_tie}
+     (nil))
+(insn/f 32 31 33 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\wifi\wifi_config.c:222 4 {*arm_addsi3}
+     (nil))
+(note 33 32 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 33 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 buff+0 S4 A32])
+        (reg:SI 0 r0 [ buff ])) board\ports\wifi\wifi_config.c:222 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (reg/f:SI 7 r7) [0 len+0 S4 A32])
+        (reg:SI 1 r1 [ len ])) board\ports\wifi\wifi_config.c:222 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:SI 3 r3 [114])
+        (reg/f:SI 7 r7)) board\ports\wifi\wifi_config.c:224 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (parallel [
+            (set (reg:SI 2 r2)
+                (const_int 4 [0x4]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\wifi\wifi_config.c:224 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 1 r1)
+        (reg:SI 3 r3 [114])) board\ports\wifi\wifi_config.c:224 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 0 r0)
+        (mem:SI (label_ref 43) [0  S4 A32])) board\ports\wifi\wifi_config.c:224 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 11 10 12 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("ef_set_env_blob") [flags 0x41]  <function_decl 05a3b500 ef_set_env_blob>) [0 ef_set_env_blob S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\wifi\wifi_config.c:224 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 12 11 14 2 (set (reg:SI 3 r3 [orig:110 D.14275 ] [110])
+        (mem/c:SI (reg/f:SI 7 r7) [0 len+0 S4 A32])) board\ports\wifi\wifi_config.c:227 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 14 12 15 2 (set (reg:SI 2 r2)
+        (reg:SI 3 r3 [orig:111 D.14276 ] [111])) board\ports\wifi\wifi_config.c:227 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 1 r1)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 buff+0 S4 A32])) board\ports\wifi\wifi_config.c:227 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 0 r0)
+        (mem:SI (const:SI (plus:SI (label_ref 43)
+                    (const_int 4 [0x4]))) [0  S4 A32])) board\ports\wifi\wifi_config.c:227 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 17 16 18 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("ef_set_env_blob") [flags 0x41]  <function_decl 05a3b500 ef_set_env_blob>) [0 ef_set_env_blob S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\wifi\wifi_config.c:227 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 18 17 25 2 (set (reg:SI 3 r3 [orig:112 D.14275 ] [112])
+        (mem/c:SI (reg/f:SI 7 r7) [0 len+0 S4 A32])) board\ports\wifi\wifi_config.c:229 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 25 18 26 2 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:113 <retval> ] [113])) board\ports\wifi\wifi_config.c:230 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 26 25 34 2 (use (reg/i:SI 0 r0)) board\ports\wifi\wifi_config.c:230 -1
+     (nil))
+(note 34 26 35 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 35 34 36 2 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\wifi\wifi_config.c:230 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])))
+        (nil)))
+(insn 36 35 37 2 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) board\ports\wifi\wifi_config.c:230 221 {blockage}
+     (nil))
+(insn/f 37 36 38 2 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) board\ports\wifi\wifi_config.c:230 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 38 37 39 2 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) board\ports\wifi\wifi_config.c:230 310 {force_register_use}
+     (nil))
+(jump_insn 39 38 40 2 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\wifi\wifi_config.c:230 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 40 39 41)
+(code_label 41 40 42 16 "" [0 uses])
+(insn 42 41 43 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 43 42 44 15 "" [0 uses])
+(insn 44 43 45 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0651fa50 *.LC1>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 45 44 46 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0651f948 *.LC0>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 46 45 47 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 47 46 28)
+(note 28 47 0 NOTE_INSN_DELETED)
+
+;; Function wlan_autoconnect_init (wlan_autoconnect_init, funcdef_no=343, decl_uid=14243, cgraph_uid=345, symbol_order=346)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 14 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 14 3 15 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\wifi\wifi_config.c:242 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 15 14 16 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\wifi\wifi_config.c:242 4 {*arm_addsi3}
+     (nil))
+(note 16 15 2 2 NOTE_INSN_PROLOGUE_END)
+(note 2 16 5 2 NOTE_INSN_FUNCTION_BEG)
+(call_insn 5 2 6 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("fal_init") [flags 0x41]  <function_decl 06510180 fal_init>) [0 fal_init S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\wifi\wifi_config.c:243 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(call_insn 6 5 7 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("easyflash_init") [flags 0x41]  <function_decl 05a3b300 easyflash_init>) [0 easyflash_init S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\wifi\wifi_config.c:244 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 7 6 8 2 (set (reg:SI 0 r0)
+        (mem:SI (label_ref 22) [0  S4 A32])) board\ports\wifi\wifi_config.c:246 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 8 7 9 2 (parallel [
+            (call (mem:SI (symbol_ref:SI ("rt_wlan_cfg_set_ops") [flags 0x41]  <function_decl 05a32880 rt_wlan_cfg_set_ops>) [0 rt_wlan_cfg_set_ops S4 A32])
+                (const_int 0 [0]))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\wifi\wifi_config.c:246 210 {*call_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(call_insn 9 8 12 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_wlan_cfg_cache_refresh") [flags 0x41]  <function_decl 05a32b00 rt_wlan_cfg_cache_refresh>) [0 rt_wlan_cfg_cache_refresh S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\wifi\wifi_config.c:247 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (nil)))
+(insn 12 9 17 2 (const_int 0 [0]) board\ports\wifi\wifi_config.c:248 225 {nop}
+     (nil))
+(note 17 12 18 2 NOTE_INSN_EPILOGUE_BEG)
+(jump_insn 18 17 19 2 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\wifi\wifi_config.c:248 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 19 18 20)
+(code_label 20 19 21 19 "" [0 uses])
+(insn 21 20 22 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 22 21 23 18 "" [0 uses])
+(insn 23 22 24 (unspec_volatile [
+            (symbol_ref:SI ("ops") [flags 0x2]  <var_decl 0644dcb8 ops>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 24 23 25 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 25 24 13)
+(note 13 25 0 NOTE_INSN_DELETED)

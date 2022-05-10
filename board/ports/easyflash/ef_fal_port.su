@@ -1,0 +1,9 @@
+ef_fal_port.c:40:11:ef_port_init	24	static
+ef_fal_port.c:64:11:ef_port_read	32	static
+ef_fal_port.c:82:11:ef_port_erase	24	static
+ef_fal_port.c:106:11:ef_port_write	32	static
+ef_fal_port.c:120:6:ef_port_env_lock	8	static
+ef_fal_port.c:127:6:ef_port_env_unlock	8	static
+ef_fal_port.c:140:6:ef_log_debug	16	static
+ef_fal_port.c:164:6:ef_log_info	16	static
+ef_fal_port.c:181:6:ef_print	16	static

@@ -1,0 +1,7 @@
+drv_qspi.c:40:12:stm32_qspi_init	120	static
+drv_qspi.c:123:13:qspi_send_cmd	72	static
+drv_qspi.c:199:20:qspixfer	40	static
+drv_qspi.c:277:17:qspi_configure	24	static
+drv_qspi.c:292:12:stm32_qspi_register_bus	16	static
+drv_qspi.c:311:10:stm32_qspi_bus_attach_device	40	static
+drv_qspi.c:389:12:rt_hw_qspi_bus_init	8	static

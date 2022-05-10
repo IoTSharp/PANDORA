@@ -1,0 +1,42 @@
+[
+ {
+  "path": "/packages/iot/pahomqtt", 
+  "ver": "v1.1.0", 
+  "name": "PAHOMQTT"
+ }, 
+ {
+  "path": "/packages/iot/WiFi/wlan_wiced", 
+  "ver": "latest", 
+  "name": "WLAN_WICED"
+ }, 
+ {
+  "path": "/packages/iot/iot_cloud/iotsharp-c-sdk", 
+  "ver": "latest", 
+  "name": "IOTSHARP_SDK"
+ }, 
+ {
+  "path": "/packages/tools/EasyFlash", 
+  "ver": "v4.1.0", 
+  "name": "EASYFLASH"
+ }, 
+ {
+  "path": "/packages/system/POSIX/strings", 
+  "ver": "latest", 
+  "name": "POSIX_STRINGS"
+ }, 
+ {
+  "path": "/packages/system/fal", 
+  "ver": "latest", 
+  "name": "FAL"
+ }, 
+ {
+  "path": "/packages/peripherals/sensors/aht10", 
+  "ver": "latest", 
+  "name": "AHT10"
+ }, 
+ {
+  "path": "/packages/peripherals/stm32_sdio", 
+  "ver": "latest", 
+  "name": "STM32_SDIO"
+ }
+]

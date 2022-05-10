@@ -1,0 +1,4 @@
+fal_flash_sfud_port.c:19:12:fal_sfud_init	16	static
+fal_flash_sfud_port.c:32:12:read	24	static
+fal_flash_sfud_port.c:39:12:write	24	static
+fal_flash_sfud_port.c:49:12:erase	16	static

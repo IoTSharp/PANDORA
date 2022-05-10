@@ -1,0 +1,725 @@
+
+;; Function fal_sfud_init (fal_sfud_init, funcdef_no=340, decl_uid=13703, cgraph_uid=342, symbol_order=343)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 42 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 42 3 43 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\fal\fal_flash_sfud_port.c:20 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 43 42 44 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -8 [0xfffffffffffffff8]))) board\ports\fal\fal_flash_sfud_port.c:20 4 {*arm_addsi3}
+     (nil))
+(insn 44 43 45 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) board\ports\fal\fal_flash_sfud_port.c:20 293 {stack_tie}
+     (nil))
+(insn/f 45 44 46 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\fal\fal_flash_sfud_port.c:20 4 {*arm_addsi3}
+     (nil))
+(note 46 45 2 2 NOTE_INSN_PROLOGUE_END)
+(note 2 46 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (parallel [
+            (set (reg:SI 3 r3 [112])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\fal\fal_flash_sfud_port.c:21 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 6 5 7 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 sfud_flash0+0 S4 A32])
+        (reg:SI 3 r3 [112])) board\ports\fal\fal_flash_sfud_port.c:21 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 0 r0)
+        (mem:SI (label_ref 56) [0  S4 A32])) board\ports\fal\fal_flash_sfud_port.c:22 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 8 7 9 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("rt_sfud_flash_find") [flags 0x41]  <function_decl 06522f80 rt_sfud_flash_find>) [0 rt_sfud_flash_find S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\fal\fal_flash_sfud_port.c:22 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (nil))))
+(insn 9 8 10 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 sfud_flash0+0 S4 A32])
+        (reg:SI 0 r0)) board\ports\fal\fal_flash_sfud_port.c:22 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 3 r3 [113])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 sfud_flash0+0 S4 A32])) board\ports\fal\fal_flash_sfud_port.c:23 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 11 10 12 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [113])
+            (const_int 0 [0]))) board\ports\fal\fal_flash_sfud_port.c:23 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 12 11 13 2 (set (pc)
+        (if_then_else (ne (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 17)
+            (pc))) board\ports\fal\fal_flash_sfud_port.c:23 194 {arm_cond_branch}
+     (nil)
+ -> 17)
+(note 13 12 14 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 14 13 39 3 (set (reg:SI 3 r3 [orig:110 D.13753 ] [110])
+        (const_int -1 [0xffffffffffffffff])) board\ports\fal\fal_flash_sfud_port.c:25 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 39 14 40 3 (set (pc)
+        (label_ref 30)) board\ports\fal\fal_flash_sfud_port.c:25 203 {*arm_jump}
+     (nil)
+ -> 30)
+(barrier 40 39 17)
+(code_label 17 40 18 4 2 "" [1 uses])
+(note 18 17 19 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 4 (set (reg/f:SI 2 r2 [114])
+        (mem:SI (const:SI (plus:SI (label_ref 56)
+                    (const_int 4 [0x4]))) [0  S4 A32])) board\ports\fal\fal_flash_sfud_port.c:28 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 20 19 21 4 (set (reg/f:SI 3 r3 [115])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 sfud_flash0+0 S4 A32])) board\ports\fal\fal_flash_sfud_port.c:28 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 21 20 22 4 (set (reg:SI 0 r0 [116])
+        (reg/f:SI 2 r2 [114])) board\ports\fal\fal_flash_sfud_port.c:28 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 21 23 4 (set (reg:SI 1 r1 [117])
+        (reg/f:SI 3 r3 [115])) board\ports\fal\fal_flash_sfud_port.c:28 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 23 22 24 4 (parallel [
+            (set (reg:SI 3 r3 [118])
+                (const_int 128 [0x80]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\fal\fal_flash_sfud_port.c:28 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 24 23 27 4 (set (reg:SI 2 r2)
+        (reg:SI 3 r3 [118])) board\ports\fal\fal_flash_sfud_port.c:28 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 27 24 29 4 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("memcpy") [flags 0x41]  <function_decl 06549600 memcpy>) [0 memcpy S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\fal\fal_flash_sfud_port.c:28 211 {*call_value_symbol}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (set (reg:SI 0 r0)
+                (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 0 r0))
+                (expr_list:SI (use (reg:SI 1 r1))
+                    (expr_list:SI (use (reg:SI 2 r2))
+                        (nil)))))))
+(insn 29 27 30 4 (parallel [
+            (set (reg:SI 3 r3 [orig:110 D.13753 ] [110])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\fal\fal_flash_sfud_port.c:29 830 {*thumb2_movsi_shortim}
+     (nil))
+(code_label 30 29 31 5 3 "" [1 uses])
+(note 31 30 36 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 36 31 37 5 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:111 <retval> ] [111])) board\ports\fal\fal_flash_sfud_port.c:30 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 37 36 47 5 (use (reg/i:SI 0 r0)) board\ports\fal\fal_flash_sfud_port.c:30 -1
+     (nil))
+(note 47 37 48 5 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 48 47 49 5 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\fal\fal_flash_sfud_port.c:30 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])))
+        (nil)))
+(insn 49 48 50 5 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) board\ports\fal\fal_flash_sfud_port.c:30 221 {blockage}
+     (nil))
+(insn/f 50 49 51 5 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) board\ports\fal\fal_flash_sfud_port.c:30 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 51 50 52 5 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) board\ports\fal\fal_flash_sfud_port.c:30 310 {force_register_use}
+     (nil))
+(jump_insn 52 51 53 5 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\fal\fal_flash_sfud_port.c:30 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 53 52 54)
+(code_label 54 53 55 5 "" [0 uses])
+(insn 55 54 56 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 56 55 57 4 "" [0 uses])
+(insn 57 56 58 (unspec_volatile [
+            (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0654e478 *.LC0>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 58 57 59 (unspec_volatile [
+            (symbol_ref:SI ("sfud_norflash0")  <var_decl 0641c580 sfud_norflash0>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 59 58 60 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 60 59 41)
+(note 41 60 0 NOTE_INSN_DELETED)
+
+;; Function read (read, funcdef_no=341, decl_uid=13709, cgraph_uid=343, symbol_order=344)
+
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 27 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 27 6 28 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\fal\fal_flash_sfud_port.c:33 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 28 27 29 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -16 [0xfffffffffffffff0]))) board\ports\fal\fal_flash_sfud_port.c:33 4 {*arm_addsi3}
+     (nil))
+(insn 29 28 30 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) board\ports\fal\fal_flash_sfud_port.c:33 293 {stack_tie}
+     (nil))
+(insn/f 30 29 31 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\fal\fal_flash_sfud_port.c:33 4 {*arm_addsi3}
+     (nil))
+(note 31 30 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 31 3 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 offset+0 S4 A32])
+        (reg:SI 0 r0 [ offset ])) board\ports\fal\fal_flash_sfud_port.c:33 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [0 buf+0 S4 A32])
+        (reg:SI 1 r1 [ buf ])) board\ports\fal\fal_flash_sfud_port.c:33 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 4 3 5 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 size+0 S4 A32])
+        (reg:SI 2 r2 [ size ])) board\ports\fal\fal_flash_sfud_port.c:33 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (parallel [
+            (set (reg:SI 2 r2 [orig:110 D.13759 ] [110])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\fal\fal_flash_sfud_port.c:34 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 3 r3 [orig:111 D.13759 ] [111])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 offset+0 S4 A32])) board\ports\fal\fal_flash_sfud_port.c:34 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 9 11 2 (parallel [
+            (set (reg:SI 1 r1 [orig:112 D.13759 ] [112])
+                (plus:SI (reg:SI 2 r2 [orig:110 D.13759 ] [110])
+                    (reg:SI 3 r3 [orig:111 D.13759 ] [111])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\fal\fal_flash_sfud_port.c:34 831 {*thumb2_addsi_short}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 3 r3)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [0 buf+0 S4 A32])) board\ports\fal\fal_flash_sfud_port.c:34 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 14 2 (set (reg:SI 2 r2)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 size+0 S4 A32])) board\ports\fal\fal_flash_sfud_port.c:34 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 14 12 15 2 (set (reg:SI 0 r0)
+        (mem:SI (label_ref 41) [0  S4 A32])) board\ports\fal\fal_flash_sfud_port.c:34 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 15 14 16 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("sfud_read") [flags 0x41]  <function_decl 06522b00 sfud_read>) [0 sfud_read S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\fal\fal_flash_sfud_port.c:34 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 16 15 23 2 (set (reg:SI 3 r3 [orig:113 D.13760 ] [113])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 size+0 S4 A32])) board\ports\fal\fal_flash_sfud_port.c:36 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 23 16 24 2 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:114 <retval> ] [114])) board\ports\fal\fal_flash_sfud_port.c:37 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 24 23 32 2 (use (reg/i:SI 0 r0)) board\ports\fal\fal_flash_sfud_port.c:37 -1
+     (nil))
+(note 32 24 33 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 33 32 34 2 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\fal\fal_flash_sfud_port.c:37 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])))
+        (nil)))
+(insn 34 33 35 2 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) board\ports\fal\fal_flash_sfud_port.c:37 221 {blockage}
+     (nil))
+(insn/f 35 34 36 2 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) board\ports\fal\fal_flash_sfud_port.c:37 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 36 35 37 2 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) board\ports\fal\fal_flash_sfud_port.c:37 310 {force_register_use}
+     (nil))
+(jump_insn 37 36 38 2 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\fal\fal_flash_sfud_port.c:37 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 38 37 39)
+(code_label 39 38 40 9 "" [0 uses])
+(insn 40 39 41 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 41 40 42 8 "" [0 uses])
+(insn 42 41 43 (unspec_volatile [
+            (symbol_ref:SI ("sfud_norflash0")  <var_decl 0641c580 sfud_norflash0>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 43 42 44 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 44 43 26)
+(note 26 44 0 NOTE_INSN_DELETED)
+
+;; Function write (write, funcdef_no=342, decl_uid=13714, cgraph_uid=344, symbol_order=345)
+
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 39 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 39 6 40 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\fal\fal_flash_sfud_port.c:40 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 40 39 41 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -16 [0xfffffffffffffff0]))) board\ports\fal\fal_flash_sfud_port.c:40 4 {*arm_addsi3}
+     (nil))
+(insn 41 40 42 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) board\ports\fal\fal_flash_sfud_port.c:40 293 {stack_tie}
+     (nil))
+(insn/f 42 41 43 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\fal\fal_flash_sfud_port.c:40 4 {*arm_addsi3}
+     (nil))
+(note 43 42 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 43 3 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 offset+0 S4 A32])
+        (reg:SI 0 r0 [ offset ])) board\ports\fal\fal_flash_sfud_port.c:40 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [0 buf+0 S4 A32])
+        (reg:SI 1 r1 [ buf ])) board\ports\fal\fal_flash_sfud_port.c:40 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 4 3 5 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 size+0 S4 A32])
+        (reg:SI 2 r2 [ size ])) board\ports\fal\fal_flash_sfud_port.c:40 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (parallel [
+            (set (reg:SI 2 r2 [orig:111 D.13762 ] [111])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\fal\fal_flash_sfud_port.c:41 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 3 r3 [orig:112 D.13762 ] [112])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [0 offset+0 S4 A32])) board\ports\fal\fal_flash_sfud_port.c:41 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 9 11 2 (parallel [
+            (set (reg:SI 1 r1 [orig:113 D.13762 ] [113])
+                (plus:SI (reg:SI 2 r2 [orig:111 D.13762 ] [111])
+                    (reg:SI 3 r3 [orig:112 D.13762 ] [112])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\fal\fal_flash_sfud_port.c:41 831 {*thumb2_addsi_short}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 3 r3)
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [0 buf+0 S4 A32])) board\ports\fal\fal_flash_sfud_port.c:41 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 14 2 (set (reg:SI 2 r2)
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 size+0 S4 A32])) board\ports\fal\fal_flash_sfud_port.c:41 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 14 12 15 2 (set (reg:SI 0 r0)
+        (mem:SI (label_ref 53) [0  S4 A32])) board\ports\fal\fal_flash_sfud_port.c:41 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 15 14 16 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("sfud_write") [flags 0x41]  <function_decl 06522c00 sfud_write>) [0 sfud_write S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\fal\fal_flash_sfud_port.c:41 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (expr_list:SI (use (reg:SI 3 r3))
+                        (nil)))))))
+(insn 16 15 18 2 (set (reg:SI 3 r3 [116])
+        (reg:SI 0 r0)) board\ports\fal\fal_flash_sfud_port.c:41 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 18 16 19 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:114 D.13763 ] [114])
+            (const_int 0 [0]))) board\ports\fal\fal_flash_sfud_port.c:41 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 19 18 20 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 24)
+            (pc))) board\ports\fal\fal_flash_sfud_port.c:41 194 {arm_cond_branch}
+     (nil)
+ -> 24)
+(note 20 19 21 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 36 3 (set (reg:SI 3 r3 [orig:110 D.13761 ] [110])
+        (const_int -1 [0xffffffffffffffff])) board\ports\fal\fal_flash_sfud_port.c:43 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 36 21 37 3 (set (pc)
+        (label_ref 27)) board\ports\fal\fal_flash_sfud_port.c:43 203 {*arm_jump}
+     (nil)
+ -> 27)
+(barrier 37 36 24)
+(code_label 24 37 25 4 11 "" [1 uses])
+(note 25 24 26 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 4 (set (reg:SI 3 r3 [orig:110 D.13761 ] [110])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 size+0 S4 A32])) board\ports\fal\fal_flash_sfud_port.c:46 615 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 27 26 28 5 12 "" [1 uses])
+(note 28 27 33 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 33 28 34 5 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:115 <retval> ] [115])) board\ports\fal\fal_flash_sfud_port.c:47 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 34 33 44 5 (use (reg/i:SI 0 r0)) board\ports\fal\fal_flash_sfud_port.c:47 -1
+     (nil))
+(note 44 34 45 5 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 45 44 46 5 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\fal\fal_flash_sfud_port.c:47 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 16 [0x10])))
+        (nil)))
+(insn 46 45 47 5 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) board\ports\fal\fal_flash_sfud_port.c:47 221 {blockage}
+     (nil))
+(insn/f 47 46 48 5 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) board\ports\fal\fal_flash_sfud_port.c:47 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 48 47 49 5 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) board\ports\fal\fal_flash_sfud_port.c:47 310 {force_register_use}
+     (nil))
+(jump_insn 49 48 50 5 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\fal\fal_flash_sfud_port.c:47 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 50 49 51)
+(code_label 51 50 52 14 "" [0 uses])
+(insn 52 51 53 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 53 52 54 13 "" [0 uses])
+(insn 54 53 55 (unspec_volatile [
+            (symbol_ref:SI ("sfud_norflash0")  <var_decl 0641c580 sfud_norflash0>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 55 54 56 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 56 55 38)
+(note 38 56 0 NOTE_INSN_DELETED)
+
+;; Function erase (erase, funcdef_no=343, decl_uid=13718, cgraph_uid=345, symbol_order=346)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 37 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 37 5 38 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -8 [0xfffffffffffffff8]))) [0  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+            (use (reg:SI 14 lr))
+        ]) board\ports\fal\fal_flash_sfud_port.c:50 292 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -8 [0xfffffffffffffff8])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32])
+                    (reg/f:SI 7 r7))
+                (set/f (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                            (const_int 4 [0x4])) [0  S4 A32])
+                    (reg:SI 14 lr))
+            ])
+        (nil)))
+(insn/f 38 37 39 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -8 [0xfffffffffffffff8]))) board\ports\fal\fal_flash_sfud_port.c:50 4 {*arm_addsi3}
+     (nil))
+(insn 39 38 40 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) board\ports\fal\fal_flash_sfud_port.c:50 293 {stack_tie}
+     (nil))
+(insn/f 40 39 41 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) board\ports\fal\fal_flash_sfud_port.c:50 4 {*arm_addsi3}
+     (nil))
+(note 41 40 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 41 3 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 offset+0 S4 A32])
+        (reg:SI 0 r0 [ offset ])) board\ports\fal\fal_flash_sfud_port.c:50 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (reg/f:SI 7 r7) [0 size+0 S4 A32])
+        (reg:SI 1 r1 [ size ])) board\ports\fal\fal_flash_sfud_port.c:50 615 {*thumb2_movsi_vfp}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (parallel [
+            (set (reg:SI 2 r2 [orig:111 D.13765 ] [111])
+                (const_int 0 [0]))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\fal\fal_flash_sfud_port.c:51 830 {*thumb2_movsi_shortim}
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 3 r3 [orig:112 D.13765 ] [112])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [0 offset+0 S4 A32])) board\ports\fal\fal_flash_sfud_port.c:51 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 3 r3 [orig:113 D.13765 ] [113])
+        (plus:SI (reg:SI 3 r3 [orig:112 D.13765 ] [112])
+            (reg:SI 2 r2 [orig:111 D.13765 ] [111]))) board\ports\fal\fal_flash_sfud_port.c:51 4 {*arm_addsi3}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 2 r2)
+        (mem/c:SI (reg/f:SI 7 r7) [0 size+0 S4 A32])) board\ports\fal\fal_flash_sfud_port.c:51 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 1 r1)
+        (reg:SI 3 r3 [orig:113 D.13765 ] [113])) board\ports\fal\fal_flash_sfud_port.c:51 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 0 r0)
+        (mem:SI (label_ref 51) [0  S4 A32])) board\ports\fal\fal_flash_sfud_port.c:51 615 {*thumb2_movsi_vfp}
+     (nil))
+(call_insn 13 12 14 2 (parallel [
+            (set (reg:SI 0 r0)
+                (call (mem:SI (symbol_ref:SI ("sfud_erase") [flags 0x41]  <function_decl 06522b80 sfud_erase>) [0 sfud_erase S4 A32])
+                    (const_int 0 [0])))
+            (use (const_int 0 [0]))
+            (clobber (reg:SI 14 lr))
+        ]) board\ports\fal\fal_flash_sfud_port.c:51 211 {*call_value_symbol}
+     (nil)
+    (expr_list (clobber (reg:SI 12 ip))
+        (expr_list:SI (use (reg:SI 0 r0))
+            (expr_list:SI (use (reg:SI 1 r1))
+                (expr_list:SI (use (reg:SI 2 r2))
+                    (nil))))))
+(insn 14 13 16 2 (set (reg:SI 3 r3 [116])
+        (reg:SI 0 r0)) board\ports\fal\fal_flash_sfud_port.c:51 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 16 14 17 2 (set (reg:CC 100 cc)
+        (compare:CC (reg:SI 3 r3 [orig:114 D.13766 ] [114])
+            (const_int 0 [0]))) board\ports\fal\fal_flash_sfud_port.c:51 186 {*arm_cmpsi_insn}
+     (nil))
+(jump_insn 17 16 18 2 (set (pc)
+        (if_then_else (eq (reg:CC 100 cc)
+                (const_int 0 [0]))
+            (label_ref 22)
+            (pc))) board\ports\fal\fal_flash_sfud_port.c:51 194 {arm_cond_branch}
+     (nil)
+ -> 22)
+(note 18 17 19 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 34 3 (set (reg:SI 3 r3 [orig:110 D.13764 ] [110])
+        (const_int -1 [0xffffffffffffffff])) board\ports\fal\fal_flash_sfud_port.c:53 615 {*thumb2_movsi_vfp}
+     (nil))
+(jump_insn 34 19 35 3 (set (pc)
+        (label_ref 25)) board\ports\fal\fal_flash_sfud_port.c:53 203 {*arm_jump}
+     (nil)
+ -> 25)
+(barrier 35 34 22)
+(code_label 22 35 23 4 16 "" [1 uses])
+(note 23 22 24 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 4 (set (reg:SI 3 r3 [orig:110 D.13764 ] [110])
+        (mem/c:SI (reg/f:SI 7 r7) [0 size+0 S4 A32])) board\ports\fal\fal_flash_sfud_port.c:56 615 {*thumb2_movsi_vfp}
+     (nil))
+(code_label 25 24 26 5 17 "" [1 uses])
+(note 26 25 31 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 31 26 32 5 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:115 <retval> ] [115])) board\ports\fal\fal_flash_sfud_port.c:57 615 {*thumb2_movsi_vfp}
+     (nil))
+(insn 32 31 42 5 (use (reg/i:SI 0 r0)) board\ports\fal\fal_flash_sfud_port.c:57 -1
+     (nil))
+(note 42 32 43 5 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 43 42 44 5 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 100 cc))
+        ]) board\ports\fal\fal_flash_sfud_port.c:57 831 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])))
+        (nil)))
+(insn 44 43 45 5 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) board\ports\fal\fal_flash_sfud_port.c:57 221 {blockage}
+     (nil))
+(insn/f 45 44 46 5 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) board\ports\fal\fal_flash_sfud_port.c:57 615 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 46 45 47 5 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) board\ports\fal\fal_flash_sfud_port.c:57 310 {force_register_use}
+     (nil))
+(jump_insn 47 46 48 5 (parallel [
+            (return)
+            (set/f (reg/f:SI 13 sp)
+                (plus:SI (reg/f:SI 13 sp)
+                    (const_int 8 [0x8])))
+            (set/f (reg/f:SI 7 r7)
+                (mem/c:SI (reg/f:SI 13 sp) [0  S4 A32]))
+            (set/f (reg:SI 15 pc)
+                (mem/c:SI (plus:SI (reg/f:SI 13 sp)
+                        (const_int 4 [0x4])) [0  S4 A32]))
+        ]) board\ports\fal\fal_flash_sfud_port.c:57 295 {*pop_multiple_with_writeback_and_return}
+     (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+        (nil))
+ -> return)
+(barrier 48 47 49)
+(code_label 49 48 50 19 "" [0 uses])
+(insn 50 49 51 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_ALIGN) 299 {align_4}
+     (nil))
+(code_label 51 50 52 18 "" [0 uses])
+(insn 52 51 53 (unspec_volatile [
+            (symbol_ref:SI ("sfud_norflash0")  <var_decl 0641c580 sfud_norflash0>)
+        ] VUNSPEC_POOL_4) 304 {consttable_4}
+     (nil))
+(insn 53 52 54 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_POOL_END) 301 {consttable_end}
+     (nil))
+(barrier 54 53 36)
+(note 36 54 0 NOTE_INSN_DELETED)

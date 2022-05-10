@@ -1,0 +1,8 @@
+drv_flash_l4.c:30:17:GetPage	24	static
+drv_flash_l4.c:53:17:GetBank	24	static
+drv_flash_l4.c:97:5:stm32_flash_read	32	static
+drv_flash_l4.c:127:5:stm32_flash_write	80	static
+drv_flash_l4.c:218:5:stm32_flash_erase	56	static
+drv_flash_l4.c:275:12:fal_flash_read	24	static
+drv_flash_l4.c:280:12:fal_flash_write	24	static
+drv_flash_l4.c:285:12:fal_flash_erase	16	static

@@ -1,0 +1,4 @@
+wifi_config.c:194:12:read_cfg	24	static
+wifi_config.c:207:12:get_len	16	static
+wifi_config.c:221:12:write_cfg	16	static
+wifi_config.c:241:6:wlan_autoconnect_init	8	static

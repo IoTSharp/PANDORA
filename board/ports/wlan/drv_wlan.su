@@ -1,0 +1,6 @@
+drv_wlan.c:41:24:bcm_hw_wlan_dev_alloc	16	static
+drv_wlan.c:66:5:rt_hw_wlan_get_initialize_status	4	static
+drv_wlan.c:76:5:rt_hw_wlan_wait_init_done	24	static
+drv_wlan.c:99:13:_wiced_irq_handler	16	static
+drv_wlan.c:104:13:wifi_init_thread_entry	16	static
+drv_wlan.c:123:5:rt_hw_wlan_init	8	static
