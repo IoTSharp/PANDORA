@@ -1,11 +1,12 @@
-# STM32L475 潘多拉开发板 BSP 说明
+# IoTSharp 对接 STM32L475 潘多拉开发板 BSP 说明
 
 ## 简介
 
-本文档为 RT-Thread 开发团队为 STM32L475 潘多拉开发板提供的 BSP (板级支持包) 说明。
+本文档为IoTSharp 对接运行 RT-Thread  的 STM32L475 潘多拉开发板提供的 BSP (板级支持包) 说明。
 
 主要内容如下：
-
+-  向IoTSharp发送遥测数据， 
+-  向IoTSharp 发送属性数据 
 - 开发板资源介绍
 - BSP 快速上手
 - 进阶使用方法
